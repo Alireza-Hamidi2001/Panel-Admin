@@ -34,7 +34,8 @@ function MainNav() {
 
             ${respond('phone')`
                 padding:  1.2rem;
-                `}
+                font-size: 1.4rem;
+            `}
         }
 
         /* This works because react-router places the active class on the active NavLink */
