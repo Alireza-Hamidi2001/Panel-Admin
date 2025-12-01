@@ -1,28 +1,6 @@
 import styled from 'styled-components';
 import { respond } from '../../utils/mixins';
 
-// const TableRow = styled.div`
-//     display: grid;
-//     /* grid-template-columns: 0.6fr 1.8fr 2.2fr 1fr 1fr 1fr; */
-//     grid-template-columns: 1fr 1fr 2fr 1fr 1fr 1fr;
-//     column-gap: 2.4rem;
-//     align-items: center;
-//     padding: 2.2rem 2.4rem;
-//     font-family: 'KottaOne';
-//     overflow: visible;
-//     text-align: center;
-
-//     &:not(:last-child) {
-//         border-bottom: 1px solid var(--color-cream-300);
-//     }
-
-//     ${respond('tab-port')`
-//         column-gap: 1.2rem;
-//     `}
-//     ${respond('phone')`
-//         column-gap: 0.6rem;
-//     `}
-// `;
 
 const Img = styled.img`
     display: block;
