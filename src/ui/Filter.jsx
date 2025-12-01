@@ -21,7 +21,6 @@ const FilterButton = styled.button`
     color: var(--color-dark-300);
     border: none;
     cursor: pointer;
-    letter-spacing: 1px;
     text-transform: capitalize;
 
     ${(props) =>
@@ -71,6 +70,7 @@ function Filter({ filterField, options }) {
                     key={option.value}
                     onClick={() => handleClick(option.value)}
                     active={option.value === currentFilterButton}
+                    disabled={option.value === currentFilterButton}
                 >
                     {option.label}
                 </FilterButton>

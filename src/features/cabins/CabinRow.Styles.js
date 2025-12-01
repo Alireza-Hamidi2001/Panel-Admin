@@ -34,6 +34,7 @@ const Img = styled.img`
     cursor: pointer;
     box-shadow: 0 0 0.5rem black;
     transition: all 0.2s;
+    margin: 0 auto;
 
     &:hover {
         transform: scale(1.7) translateX(4px);
