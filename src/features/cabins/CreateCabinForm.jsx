@@ -93,7 +93,7 @@ function CreateCabinForm({ setIsOpenModal }) {
     }
 
     function cancelButton() {
-        setIsOpenModal(false);
+        setIsOpenModal?.(false);
         reset();
     }
 

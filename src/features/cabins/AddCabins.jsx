@@ -1,9 +1,7 @@
 import Button from '../../ui/Button';
 import CreateCabinForm from './CreateCabinForm';
-import CabinTable from './CabinTable';
 
 import { MdAddHomeWork } from 'react-icons/md';
-import { SiRevealdotjs } from 'react-icons/si';
 import Modal from '../../ui/Modal';
 
 function AddCabins() {
@@ -23,27 +21,3 @@ function AddCabins() {
 }
 
 export default AddCabins;
-
-// function AddCabins() {
-//     const [isOpenModal, setIsOpenModal] = useState(false);
-
-//     return (
-//         <>
-//             <Button
-//                 variation="primary"
-//                 onClick={() => setIsOpenModal((show) => !show)}
-//             >
-//                 {isOpenModal ? 'Close' : 'Add Cabin'}
-//             </Button>
-//             {isOpenModal && (
-//                 <ModalNewCabin setIsOpenModal={setIsOpenModal}>
-//                     <CreateCabinForm
-//                         setIsOpenModal={setIsOpenModal}
-//                     />
-//                 </ModalNewCabin>
-//             )}
-//         </>
-//     );
-// }
-
-// export default AddCabins;

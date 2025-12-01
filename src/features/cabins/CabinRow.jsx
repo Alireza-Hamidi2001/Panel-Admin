@@ -96,8 +96,14 @@ function CabinRow({ cabin }) {
                 <Capacity>Fits up to {maxCapacity} guests</Capacity>
                 <Price>{formatCurrency(regularPrice)}</Price>
                 <Discount>
-                    <p>{formatCurrency(regularPrice)}</p>
-                    <p>{formatCurrency(finalPrice)}</p>
+                    {discount !== 0 ? (
+                        <>
+                            <p>{formatCurrency(regularPrice)}</p>
+                            <p>{formatCurrency(finalPrice)}</p>
+                        </>
+                    ) : (
+                        <p>&#8212;</p>
+                    )}
                 </Discount>
                 <ButtonsContainer>
                     <DeleteCabins

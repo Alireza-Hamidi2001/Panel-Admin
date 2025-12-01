@@ -26,7 +26,6 @@ const variations = {
         color: var(--color-white);
         background-color: var(--color-primary-100);
         font-family: 'open-sans';
-        /* word-spacing: 2px; */
         position: relative;
         padding: 0.8rem 2rem;
         font-size: 1.4rem;
@@ -37,6 +36,9 @@ const variations = {
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
+
+        min-width: 8rem;
+        min-height: 1.8rem;
 
         ${respond('tab-port')`
             padding: 0.7rem 1.4rem;
@@ -96,7 +98,7 @@ const StyledButton = styled.button`
     /* max-width: 13rem; */
 
     &:disabled {
-        filter: grayscale(0.2) brightness(0.3);
+        filter: grayscale(0.8);
 
         &:hover {
             top: 0;
