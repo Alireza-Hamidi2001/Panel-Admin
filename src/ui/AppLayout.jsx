@@ -16,7 +16,7 @@ function AppLayout() {
             grid-template-columns: 20rem 1fr;
         `}
         ${respond('phone')`
-            grid-template-columns: 17rem 1fr;
+            grid-template-columns: 14rem 1fr;
         `}
     `;
 
@@ -30,7 +30,7 @@ function AppLayout() {
             padding: 2rem;
         `}
         ${respond('phone')`
-            padding: 1rem;
+            padding: 1.5rem;
         `}
     `;
 

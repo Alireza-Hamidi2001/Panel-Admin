@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import logo from './../others/logo.png';
 import nameLogo from './../assets/images/alireza4.png';
+import { respond } from '../utils/mixins';
 
 function Logo() {
     const Anchor_Style = styled.a`
@@ -17,7 +17,13 @@ function Logo() {
 
     const Img = styled.img`
         height: 4.5rem;
-        /* width: 6rem; */
+
+        ${respond('tab-port')`
+            height: 4rem;
+        `}
+        ${respond('phone')`
+            height: 3.5rem;
+        `}
     `;
 
     return (

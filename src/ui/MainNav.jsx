@@ -6,6 +6,7 @@ import { HiOutlineCalendarDateRange } from 'react-icons/hi2';
 import { BsBuildings } from 'react-icons/bs';
 import { HiOutlineUsers } from 'react-icons/hi2';
 import { TbSettings2 } from 'react-icons/tb';
+import { respond } from '../utils/mixins';
 
 function MainNav() {
     const NavList = styled.ul`
@@ -30,6 +31,10 @@ function MainNav() {
             font-weight: 500;
             padding: 1.2rem 2.4rem;
             transition: all 0.3s;
+
+            ${respond('phone')`
+                padding:  1.2rem;
+                `}
         }
 
         /* This works because react-router places the active class on the active NavLink */
@@ -61,31 +66,31 @@ function MainNav() {
             <NavList>
                 <li>
                     <NavLink_Styled to="/dashboard">
-                        <GoHome />
+                        <GoHome className="icons_sidebar" />
                         Home
                     </NavLink_Styled>
                 </li>
                 <li>
                     <NavLink_Styled to="/bookings">
-                        <HiOutlineCalendarDateRange />
+                        <HiOutlineCalendarDateRange className="icons_sidebar" />
                         Bookings
                     </NavLink_Styled>
                 </li>
                 <li>
                     <NavLink_Styled to="/cabins">
-                        <BsBuildings />
+                        <BsBuildings className="icons_sidebar" />
                         Cabins
                     </NavLink_Styled>
                 </li>
                 <li>
                     <NavLink_Styled to="/users">
-                        <HiOutlineUsers />
+                        <HiOutlineUsers className="icons_sidebar" />
                         Users
                     </NavLink_Styled>
                 </li>
                 <li>
                     <NavLink_Styled to="/settings">
-                        <TbSettings2 />
+                        <TbSettings2 className="icons_sidebar" />
                         Settings
                     </NavLink_Styled>
                 </li>

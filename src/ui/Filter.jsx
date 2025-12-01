@@ -13,7 +13,7 @@ const StyledFilter = styled.div`
 
     ${respond('tab-port')`
         gap: 0.4rem;
-            `}
+    `}
 `;
 
 const FilterButton = styled.button`
