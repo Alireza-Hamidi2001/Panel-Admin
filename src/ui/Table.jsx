@@ -1,5 +1,7 @@
 import { createContext, useContext } from 'react';
 import styled from 'styled-components';
+import { respond } from '../utils/mixins';
+
 // import Empty from './Empty';
 
 const StyledTable = styled.div`
@@ -24,6 +26,14 @@ const StyledHeader = styled(CommonRow)`
     font-weight: 700;
     color: var(--color-grey-600);
     text-align: center;
+    font-size: 2rem;
+
+    ${respond('tab-port')`
+        font-size: 1.4rem;
+        `}
+    ${respond('phone')`
+        font-size: 0.7rem;
+        `}
 `;
 
 const StyledRow = styled(CommonRow)`
@@ -87,7 +97,7 @@ function Row({ children }) {
     );
 }
 function Body({ data, render }) {
-    if(!data.length) return <Empty>No data to show</Empty>
+    if (!data.length) return <Empty>No data to show</Empty>;
     return <StyledBody>{data.map(render)}</StyledBody>;
 }
 

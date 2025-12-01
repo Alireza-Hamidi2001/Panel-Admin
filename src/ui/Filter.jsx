@@ -10,9 +10,15 @@ const StyledFilter = styled.div`
     padding: 0.4rem;
     display: flex;
     gap: 0.8rem;
+    box-shadow: 0 0 0.7rem var(--color-cream-400);
 
-    ${respond('tab-port')`
-        gap: 0.4rem;
+    ${respond('phone')`
+        padding: 0.2rem;
+        gap: 0rem;
+    `}
+    ${respond('phone')`
+        padding: 0.2rem 0.4rem;
+        gap: 0rem;
     `}
 `;
 
@@ -31,7 +37,7 @@ const FilterButton = styled.button`
             font-style: italic;
         `}
 
-    border-radius: 4px;
+    border-radius: 2px;
     font-weight: 500;
     font-size: 1.4rem;
     /* To give the same height as select */
@@ -44,6 +50,7 @@ const FilterButton = styled.button`
 
     ${respond('phone')`
             font-size: 1rem;
+            font-weight: 300;
             `}
 
     &:hover:not(:disabled) {

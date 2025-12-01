@@ -5,7 +5,7 @@ const StyledSelect = styled.select`
     font-size: 1.4rem;
     padding: 0.84rem 0.8rem;
     /* border: 1px solid
-        ${(props) =>
+    ${(props) =>
         props.type === 'white'
             ? 'var(--color-dark-100)'
             : 'var(--color-dark-300)'}; */
@@ -13,7 +13,7 @@ const StyledSelect = styled.select`
     border-radius: 4px;
     background-color: var(--color-cream-250);
     font-weight: 500;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 0 0.7rem var(--color-cream-400);
     color: var(--color-dark-300);
 
     &:focus {
@@ -21,24 +21,18 @@ const StyledSelect = styled.select`
     }
 
     ${respond('tab-port')`
-                font-size: 1.2rem;
-                `}
+        font-size: 1.2rem;
+        padding: 0.24rem 0.8rem;
+        `}
 
     ${respond('phone')`
-                font-size: 1rem;
-                `}
+        font-size: 1rem;
+        padding: 0.25rem 0.8rem;
+    `}
 `;
 
 const Option = styled.option`
     color: var() (--color-dark-200);
-
-    ${respond('tab-port')`
-                font-size: 1.2rem;
-                `}
-
-    ${respond('phone')`
-                font-size: 1rem;
-                `}
 `;
 
 function Select({ options, onChange, value }) {
