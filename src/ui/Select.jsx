@@ -4,17 +4,14 @@ import { respond } from '../utils/mixins';
 const StyledSelect = styled.select`
     font-size: 1.4rem;
     padding: 0.84rem 0.8rem;
-    /* border: 1px solid
-    ${(props) =>
-        props.type === 'white'
-            ? 'var(--color-dark-100)'
-            : 'var(--color-dark-300)'}; */
-    border: 1px solid var(--color-cream-300);
+    /* border: 1px solid */
+    border: 1px solid var(--color-main-light);
+    background-color: var(--color-main-dark);
+    color: var(--color-light-100);
+    box-shadow: 0 0 0.5rem var(--color-main-dark);
     border-radius: 4px;
-    background-color: var(--color-cream-250);
     font-weight: 500;
     box-shadow: 0 0 0.7rem var(--color-cream-400);
-    color: var(--color-dark-300);
 
     &:focus {
         outline: none;

@@ -5,10 +5,10 @@ import { respond } from '../utils/mixins';
 import Footer from '../pages/Footer';
 
 const Sidebar_Styled = styled.aside`
-    background-color: var(--color-white);
+    background-color: var(--color-main);
     padding: 2rem;
     font-size: 1.5rem;
-    color: var(--color-font-dark);
+    color: var(--color-font-light);
     grid-row: 1/-1;
     display: flex;
     flex-direction: column;

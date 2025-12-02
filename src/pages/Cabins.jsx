@@ -4,6 +4,12 @@ import CabinTable from '../features/cabins/CabinTable';
 import AddCabins from '../features/cabins/AddCabins';
 import ShowCabins from '../features/cabins/ShowCabins';
 import CabinTableOperations from '../features/cabins/CabinTableOperations';
+import styled from 'styled-components';
+
+const CabinsButtonContainer = styled.div`
+    display: flex;
+    column-gap: 2rem;
+`;
 
 function Cabins() {
     return (
@@ -16,8 +22,10 @@ function Cabins() {
             </Row>
             <Row type="vertical">
                 <CabinTable />
-                <AddCabins />
-                <ShowCabins />
+                <CabinsButtonContainer>
+                    <AddCabins />
+                    <ShowCabins />
+                </CabinsButtonContainer>
             </Row>
         </>
     );

@@ -21,7 +21,7 @@ function AppLayout() {
     `;
 
     const Main = styled.main`
-        background-color: var(--color-cream-100);
+        background-color: var(--color-light-100);
         padding: 4rem;
         font-size: 1.5rem;
         overflow: auto;

@@ -33,7 +33,7 @@ const Stacked = styled.div`
         color: var(--color-dark-300);
 
         ${respond('tab-port')`
-            font-size: var(--font-mobile);
+            font-size: 0.8rem;
         `}
     }
 
@@ -42,7 +42,7 @@ const Stacked = styled.div`
         font-size: 1.2rem;
 
         ${respond('tab-port')`
-            font-size: 0.8rem;
+            font-size: 0.5rem;
         `}
     }
 `;

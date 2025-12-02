@@ -25,7 +25,7 @@ function MainNav() {
             align-items: center;
             gap: 1.2rem;
 
-            color: var(--color-font-dark);
+            color: var(--color-font-light);
             text-decoration: none;
             font-size: 1.6rem;
             font-weight: 500;
@@ -43,8 +43,8 @@ function MainNav() {
         &:active,
         &.active:link,
         &.active:visited {
-            color: var(--color-cream-500);
-            background-color: var(--color-cream-100);
+            color: var(--color-light);
+            background-color: var(--color-main-dark);
         }
 
         & svg {

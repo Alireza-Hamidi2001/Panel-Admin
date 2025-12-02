@@ -3,14 +3,14 @@ import styled, { css } from 'styled-components';
 import { respond } from '../utils/mixins';
 
 const StyledFilter = styled.div`
-    border: 1px solid var(--color-cream-300);
-    background-color: var(--color-cream-250);
+    border: 1px solid var(--color-main-light);
+    background-color: var(--color-main-dark);
     box-shadow: var(--shadow-sm);
     border-radius: 4px;
     padding: 0.4rem;
     display: flex;
     gap: 0.8rem;
-    box-shadow: 0 0 0.7rem var(--color-cream-400);
+    box-shadow: 0 0 0.5rem var(--color-main-dark);
 
     ${respond('phone')`
         padding: 0.2rem;
@@ -23,8 +23,8 @@ const StyledFilter = styled.div`
 `;
 
 const FilterButton = styled.button`
-    background-color: var(--color-cream-250);
-    color: var(--color-dark-300);
+    background-color: var(--color-main-dark);
+    color: var(--color-light-100);
     border: none;
     cursor: pointer;
     text-transform: capitalize;
@@ -32,7 +32,7 @@ const FilterButton = styled.button`
     ${(props) =>
         props.active &&
         css`
-            background-color: var(--color-cream-400);
+            background-color: var(--color-main-light);
             color: var(--color-light-100);
             font-style: italic;
         `}
@@ -54,7 +54,7 @@ const FilterButton = styled.button`
             `}
 
     &:hover:not(:disabled) {
-        background-color: var(--color-cream-400);
+        background-color: var(--color-main-light);
         color: var(--color-light-100);
     }
 `;

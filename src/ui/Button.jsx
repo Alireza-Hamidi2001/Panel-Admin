@@ -23,8 +23,8 @@ const sizes = {
 
 const variations = {
     primary: css`
-        color: var(--color-white);
-        background-color: var(--color-primary-100);
+        color: var(--color-black);
+        background-color: var(--color-gold);
         font-family: 'open-sans';
         position: relative;
         padding: 0.8rem 2rem;

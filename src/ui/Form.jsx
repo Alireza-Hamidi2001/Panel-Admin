@@ -7,7 +7,7 @@ const Form = styled.form`
             padding: 2.4rem 4rem;
 
             /* Box */
-            border: 1px solid var(--color-cream-300);
+            border: 1px solid var(--color-red);
         `}
 
     ${(props) =>
@@ -16,8 +16,8 @@ const Form = styled.form`
             width: 80rem;
         `}
     
-  
-  overflow: hidden;
+
+    overflow: hidden;
     font-size: 1.4rem;
 `;
 

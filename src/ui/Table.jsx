@@ -10,6 +10,8 @@ const StyledTable = styled.div`
     margin: 0 auto;
     overflow: hidden;
     width: 100%;
+    box-shadow: 0 0 1rem black;
+    margin-bottom: 3rem;
 `;
 
 const CommonRow = styled.div`
@@ -18,26 +20,20 @@ const CommonRow = styled.div`
     column-gap: 2.4rem;
     align-items: center;
     transition: none;
-    /* ${respond('tab-land')`
-        column-gap: 1.2rem;
-    `} */
 `;
 
 const StyledHeader = styled(CommonRow)`
     padding: 1.6rem 2.4rem;
-    background-color: var(--color-cream-300);
+    background-color: var(--color-main-dark);
     text-transform: uppercase;
     letter-spacing: 0.4px;
     font-weight: 700;
-    color: var(--color-grey-600);
+    color: var(--color-light-200);
+    font-family: 'open-sans';
+    /* letter-spacing: 3px; */
     text-align: center;
     font-size: 1.4rem;
-    /* width: fit-content; */
 
-    /* ${respond('tab-land')`
-        font-size: var(--font-tab);
-        padding: 0.8rem 1.2rem;
-        `} */
     ${respond('tab-port')`
         font-size: var(--font-tab);
         padding: 0.8rem 1.2rem;
@@ -49,7 +45,7 @@ const StyledHeader = styled(CommonRow)`
 
 const StyledRow = styled(CommonRow)`
     padding: 2rem 3rem;
-    background-color: var(--color-cream-250);
+    background-color: #fff;
     text-align: center;
 
     ${respond('tab-port')`
@@ -57,7 +53,7 @@ const StyledRow = styled(CommonRow)`
         `}
 
     &:not(:last-child) {
-        border-bottom: 1px solid var(--color-cream-300);
+        border-bottom: 1px solid var(--color-main-border);
     }
 `;
 
