@@ -13,7 +13,7 @@ function BookingTable() {
     if (isLoading)
         return (
             <LoaderWrapper>
-                <PropagateLoader size={20} speedMultiplier={2} />
+                <PropagateLoader size={13} speedMultiplier={2} />
             </LoaderWrapper>
         );
 
