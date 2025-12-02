@@ -1,4 +1,8 @@
 :root {
+
+    --font-tab: 1.2rem ;
+    --font-mobile: 0.7rem ;
+
     --color-white: #fff;
     --color-black: #000;
 
@@ -51,9 +55,11 @@
     --color-green-500: #22c55e;
     --color-green-700: #15803d;
 
-    /* Silver (Gray) */
-    --color-silver-100: #f3f4f6;
-    --color-silver-300: #d1d5db;
-    --color-silver-500: #6b7280;
-    --color-silver-700: #374151;
+    /* red (Gray) */
+    --color-red-50: #f0bdca;
+    --color-red-100: #f26a8d;
+    --color-red-200: #dd2d4a;
+    --color-red-300: #de3a56;
+    --color-red-500: #de3a56;
+    --color-red-700: #880d1e;
 }

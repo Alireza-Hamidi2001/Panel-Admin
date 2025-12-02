@@ -9,6 +9,7 @@ const StyledTable = styled.div`
     border-radius: 5px;
     margin: 0 auto;
     overflow: hidden;
+    width: 100%;
 `;
 
 const CommonRow = styled.div`
@@ -17,6 +18,9 @@ const CommonRow = styled.div`
     column-gap: 2.4rem;
     align-items: center;
     transition: none;
+    /* ${respond('tab-land')`
+        column-gap: 1.2rem;
+    `} */
 `;
 
 const StyledHeader = styled(CommonRow)`
@@ -27,14 +31,19 @@ const StyledHeader = styled(CommonRow)`
     font-weight: 700;
     color: var(--color-grey-600);
     text-align: center;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     /* width: fit-content; */
 
+    /* ${respond('tab-land')`
+        font-size: var(--font-tab);
+        padding: 0.8rem 1.2rem;
+        `} */
     ${respond('tab-port')`
-        font-size: 1.4rem;
+        font-size: var(--font-tab);
+        padding: 0.8rem 1.2rem;
         `}
     ${respond('phone')`
-        font-size: 0.7rem;
+        font-size: var(--font-mobile);
         `}
 `;
 
@@ -43,13 +52,17 @@ const StyledRow = styled(CommonRow)`
     background-color: var(--color-cream-250);
     text-align: center;
 
+    ${respond('tab-port')`
+        padding: 1rem 1.5rem;
+        `}
+
     &:not(:last-child) {
         border-bottom: 1px solid var(--color-cream-300);
     }
 `;
 
 const StyledBody = styled.section`
-    margin: 0.4rem 0;
+    /* margin: 0.4rem 0; */
 `;
 
 const Footer = styled.footer`

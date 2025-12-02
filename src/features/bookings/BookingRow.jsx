@@ -6,12 +6,20 @@ import Table from '../../ui/Table';
 
 import { formatCurrency } from '../../utils/helpers';
 import { formatDistanceFromNow } from '../../utils/helpers';
+import { respond } from '../../utils/mixins';
 
 const Cabin = styled.div`
     font-size: 1.6rem;
     font-weight: 600;
     color: var(--color-dark-300);
     font-family: 'KottaOne';
+
+    ${respond('tab-port')`
+        font-size: var(--font-tab);
+    `}
+    ${respond('phone')`
+        font-size: var(--font-mobile);
+    `}
 `;
 
 const Stacked = styled.div`
@@ -23,18 +31,33 @@ const Stacked = styled.div`
         font-weight: 500;
         font-size: 1.4rem;
         color: var(--color-dark-300);
+
+        ${respond('tab-port')`
+            font-size: var(--font-mobile);
+        `}
     }
 
     & span:last-child {
         color: var(--color-dark-200);
         font-size: 1.2rem;
-      }
-      `;
+
+        ${respond('tab-port')`
+            font-size: 0.8rem;
+        `}
+    }
+`;
 
 const Amount = styled.div`
     font-family: 'KottaOne';
     font-size: 1.4rem;
     font-weight: 500;
+
+    ${respond('tab-port')`
+        font-size: var(--font-mobile);
+    `}
+    ${respond('phone')`
+        font-size: 0.8rem;
+    `}
 `;
 
 function BookingRow({
@@ -54,7 +77,7 @@ function BookingRow({
     const statusToTagName = {
         unconfirmed: 'blue',
         'checked-in': 'green',
-        'checked-out': 'silver',
+        'checked-out': 'red',
     };
 
     return (
@@ -71,11 +94,12 @@ function BookingRow({
                     {isToday(new Date(startDate))
                         ? 'Today'
                         : formatDistanceFromNow(startDate)}{' '}
-                    &rarr; {numNights} night stay
+                    <br />
+                    {numNights} night stay
                 </span>
                 <span>
                     {format(new Date(startDate), 'MMM dd yyyy')}{' '}
-                    &mdash; {format(new Date(endDate), 'MMM dd yyyy')}
+                    <br /> {format(new Date(endDate), 'MMM dd yyyy')}
                 </span>
             </Stacked>
 

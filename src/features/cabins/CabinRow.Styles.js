@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { respond } from '../../utils/mixins';
 
-
 const Img = styled.img`
     display: block;
     width: 6.4rem;
@@ -33,10 +32,10 @@ const Cabin = styled.div`
     font-family: 'KottaOne';
 
     ${respond('tab-port')`
-    font-size: 1.4rem;
+    font-size: var(--font-tab);
     `}
     ${respond('phone')`
-        font-size: 1.2rem;
+        font-size: var(--font-mobile);
     `}
 `;
 
@@ -46,11 +45,12 @@ const Capacity = styled.div`
     font-weight: 500;
 
     ${respond('tab-port')`
-    font-size: 1.4rem;
-    `}
+        font-size: var(--font-tab);
+        
+        `}
     ${respond('phone')`
-        font-size: 1rem;
-    `}
+        font-size: var(--font-mobile);
+        `}
 `;
 
 const Price = styled.div`
@@ -59,18 +59,19 @@ const Price = styled.div`
     font-weight: 500;
 
     ${respond('tab-port')`
-    font-size: 1.4rem;
+    font-size: var(--font-tab);
     `}
     ${respond('phone')`
-        font-size: 1rem;
-    `}
+        font-size: var(--font-mobile);
+        `}
 `;
 
 const Discount = styled.div`
     text-align: center;
     font-family: 'KottaOne';
-    font-weight: 600;
-    color: var(--color-green-100);
+    font-weight: 500;
+    color: var(--color-green-500);
+
     text-align: center;
 
     & > p:first-child {
@@ -83,11 +84,11 @@ const Discount = styled.div`
         font-size: 1.6rem;
 
         ${respond('tab-port')`
-        font-size: 1.4rem;
-        `}
+            font-size: var(--font-tab);
+            `}
 
         ${respond('phone')`
-        font-size: 1rem;
+        font-size: var(--font-mobile);
         `}
     }
 `;
