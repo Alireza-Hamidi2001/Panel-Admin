@@ -6,8 +6,9 @@ import { getCabins } from '../../services/apiCabins';
 import CabinRow from './CabinRow';
 import Table from '../../ui/Table';
 import { useSearchParams } from 'react-router-dom';
+import Empty from '../../ui/Empty';
 
-const LoaderWrapper = styled.div`
+export const LoaderWrapper = styled.div`
     position: fixed;
     inset: 0;
     display: flex;
@@ -60,6 +61,8 @@ function CabinTable() {
                 <PropagateLoader size={20} speedMultiplier={2} />
             </LoaderWrapper>
         );
+
+    if (!cabins.length) return <Empty resource="cabins" />;
 
     return (
         <Table columns="1fr 1fr 2fr 1fr 1fr 1fr">

@@ -6,7 +6,8 @@ import { respond } from '../utils/mixins';
 
 const StyledTable = styled.div`
     font-size: 1.4rem;
-    border-radius: 7px;
+    border-radius: 5px;
+    margin: 0 auto;
     overflow: hidden;
 `;
 
@@ -26,7 +27,8 @@ const StyledHeader = styled(CommonRow)`
     font-weight: 700;
     color: var(--color-grey-600);
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
+    /* width: fit-content; */
 
     ${respond('tab-port')`
         font-size: 1.4rem;
