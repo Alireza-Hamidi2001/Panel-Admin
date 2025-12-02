@@ -49,9 +49,8 @@ const FormRow = styled.div`
 
 const Label = styled.label`
     font-size: 1.6rem;
-    font-family: 'StoryScript';
+    font-family: 'KottaOne';
     word-spacing: 4px;
-    letter-spacing: 1px;
     color: var(--color-font-dark);
 `;
 

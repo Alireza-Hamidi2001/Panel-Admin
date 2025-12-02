@@ -4,7 +4,8 @@ import { respond } from '../utils/mixins';
 const FileInput = styled.input`
     font-size: 1.4rem;
     border-radius: 4px;
-    background-color: var(--color-cream-150);
+
+    background-color: transparent;
     border: 1px solid var(--color-cream-200);
     padding: 0.8rem 1.2rem;
     transition: all 0.2s;
@@ -19,12 +20,12 @@ const FileInput = styled.input`
         font: inherit;
         padding: 0.8rem 1.2rem;
         margin-right: 1.2rem;
+        font-family: 'KottaOne';
         border-radius: 2px;
         border: none;
-        color: var(--color-white);
-        background-color: var(--color-primary-100);
+        color: var(--color-black);
+        background-color: var(--color-gold-light);
         letter-spacing: 1px;
-        font-style: italic;
 
         cursor: pointer;
         transition: color 0.2s, background-color 0.2s;
@@ -38,7 +39,7 @@ const FileInput = styled.input`
         `}
 
         &:hover {
-            background-color: var(--color-primary-300);
+            background-color: var(--color-gold);
         }
     }
 `;

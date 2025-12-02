@@ -19,23 +19,24 @@ const ModalContainer = styled.div`
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    backdrop-filter: blur(2rem);
+    backdrop-filter: blur(1rem) brightness(0.2); ;
+    box-shadow: 0 0 1rem red;
 `;
 
 const StyledModal = styled.div`
     position: fixed;
-    /* top: 0%; */
     left: 50%;
     transform: translateX(-50%);
-    background: var(--color-cream-100);
-    box-shadow: 0 0 3rem var(--color-cream-500);
-    padding: 3.2rem 4rem;
+    background: transparent;
+    /* background: var(--color-cream-100); */
+    /* box-shadow: 0 0 3rem var(--color-cream-500); */
+    padding: 6rem;
     transition: all 0.5s;
     animation: modalShow 0.5s ease-in-out;
+    width: 75%;
 
     ${respond('tab-port')`
         width: 90%;
-        padding: 5rem 0;
     `}
 `;
 

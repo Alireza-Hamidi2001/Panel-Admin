@@ -23,9 +23,9 @@ const sizes = {
 
 const variations = {
     primary: css`
-        color: var(--color-black);
+        color: var(--color-gold-dark);
         background-color: var(--color-gold);
-        font-family: 'open-sans';
+        font-family: 'KottaOne';
         position: relative;
         padding: 0.8rem 2rem;
         font-size: 1.4rem;
