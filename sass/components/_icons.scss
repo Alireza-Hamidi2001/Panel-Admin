@@ -26,6 +26,10 @@
             font-size: 1.5rem;
         }
 
+        @include respond('phone') {
+            font-size: 1rem;
+        }
+
     }
 
     &_close {
@@ -55,6 +59,10 @@
         @include respond('tab-port') {
             font-size: 1.5rem;
         }
+
+        @include respond('phone') {
+            font-size: 1rem;
+        }
     }
 
     &_addCabin {
@@ -70,6 +78,18 @@
 
         @include respond('phone') {
             font-size: 1.2rem;
+        }
+    }
+
+    &_booking {
+        font-size: 1.2rem;
+
+        @include respond('tab-port') {
+            font-size: 0.7rem;
+        }
+
+        @include respond('phone') {
+            font-size: 0.5rem;
         }
     }
 }

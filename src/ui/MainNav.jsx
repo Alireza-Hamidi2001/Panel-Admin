@@ -7,6 +7,7 @@ import { BsBuildings } from 'react-icons/bs';
 import { HiOutlineUsers } from 'react-icons/hi2';
 import { TbSettings2 } from 'react-icons/tb';
 import { respond } from '../utils/mixins';
+import Uploader from '../data/Uploader';
 
 function MainNav() {
     const NavList = styled.ul`
@@ -96,6 +97,7 @@ function MainNav() {
                     </NavLink_Styled>
                 </li>
             </NavList>
+            <Uploader />
         </nav>
     );
 }

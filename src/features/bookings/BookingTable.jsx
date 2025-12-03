@@ -6,6 +6,9 @@ import { useBookings } from './useBookings';
 import { PropagateLoader } from 'react-spinners';
 import { LoaderWrapper } from '../cabins/CabinTable';
 
+// ICONS
+import { AiOutlineDash } from 'react-icons/ai';
+
 function BookingTable() {
     // const bookings = [];
     const { bookings, isLoading } = useBookings();
@@ -22,14 +25,16 @@ function BookingTable() {
     return (
         <Menus>
             {/* <Table columns="0.6fr 2fr 2.4fr 1.4fr 1fr auto"> */}
-            <Table columns="1fr 2fr 2fr 1.8fr 1fr 1fr">
+            <Table columns="1fr 4fr 3fr 3fr 1fr 1fr">
                 <Table.Header>
                     <div>Cabin</div>
                     <div>Guest</div>
                     <div>Dates</div>
                     <div>Status</div>
                     <div>Amount</div>
-                    <div>Controls</div>
+                    <div>
+                        <AiOutlineDash />
+                    </div>
                 </Table.Header>
 
                 <Table.Body

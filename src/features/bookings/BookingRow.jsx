@@ -8,57 +8,19 @@ import { formatCurrency } from '../../utils/helpers';
 import { formatDistanceFromNow } from '../../utils/helpers';
 import { respond } from '../../utils/mixins';
 
-const Cabin = styled.div`
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: var(--color-dark-300);
-    font-family: 'KottaOne';
+// ICONS
+import { IoMdPricetags } from 'react-icons/io';
+import { FaUser } from 'react-icons/fa6';
+import { MdEmail } from 'react-icons/md';
+import { IoTimerSharp } from 'react-icons/io5';
 
-    ${respond('tab-port')`
-        font-size: var(--font-tab);
-    `}
-    ${respond('phone')`
-        font-size: var(--font-mobile);
-    `}
-`;
-
-const Stacked = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-
-    & span:first-child {
-        font-weight: 500;
-        font-size: 1.4rem;
-        color: var(--color-dark-300);
-
-        ${respond('tab-port')`
-            font-size: 0.8rem;
-        `}
-    }
-
-    & span:last-child {
-        color: var(--color-dark-200);
-        font-size: 1.2rem;
-
-        ${respond('tab-port')`
-            font-size: 0.5rem;
-        `}
-    }
-`;
-
-const Amount = styled.div`
-    font-family: 'KottaOne';
-    font-size: 1.4rem;
-    font-weight: 500;
-
-    ${respond('tab-port')`
-        font-size: var(--font-mobile);
-    `}
-    ${respond('phone')`
-        font-size: 0.8rem;
-    `}
-`;
+import {
+    Amount,
+    Cabin,
+    StackedOne,
+    StackedTwo,
+} from './BookingRowStyles';
+import { BsCalendarDate } from 'react-icons/bs';
 
 function BookingRow({
     booking: {
@@ -70,7 +32,7 @@ function BookingRow({
         numGuests,
         totalPrice,
         status,
-        guests: { fullName: guestName, email },
+        guests: { fullName: guestName = '', email },
         cabins: { name: cabinName },
     },
 }) {
@@ -84,30 +46,43 @@ function BookingRow({
         <Table.Row>
             <Cabin>{cabinName}</Cabin>
 
-            <Stacked>
-                <span>{guestName}</span>
-                <span>{email}</span>
-            </Stacked>
+            <StackedOne>
+                <span>
+                    <FaUser className="icons_booking" />
+                    {guestName}
+                </span>
+                <span>
+                    <MdEmail className="icons_booking" />
+                    {email}
+                </span>
+            </StackedOne>
 
-            <Stacked>
+            <StackedTwo>
                 <span>
-                    {isToday(new Date(startDate))
-                        ? 'Today'
-                        : formatDistanceFromNow(startDate)}{' '}
-                    <br />
-                    {numNights} night stay
+                    <p>
+                        <IoTimerSharp className="icons_booking" />
+                        {isToday(new Date(startDate))
+                            ? 'Today'
+                            : formatDistanceFromNow(startDate)}{' '}
+                    </p>
+                    <p>{numNights} night stay</p>
                 </span>
                 <span>
-                    {format(new Date(startDate), 'MMM dd yyyy')}{' '}
-                    <br /> {format(new Date(endDate), 'MMM dd yyyy')}
+                    <BsCalendarDate className="icons_booking" />
+                    {format(new Date(startDate), 'MMM dd yyyy')}
+                    &mdash;
+                    {format(new Date(endDate), 'MMM dd yyyy')}
                 </span>
-            </Stacked>
+            </StackedTwo>
 
             <Tag type={statusToTagName[status]}>
-                {status.replace('-', ' ')}
+                <p>{status.replace('-', ' ')}</p>
             </Tag>
 
-            <Amount>{formatCurrency(totalPrice)}</Amount>
+            <Amount>
+                <IoMdPricetags className="icons_booking" />
+                {formatCurrency(totalPrice)}
+            </Amount>
         </Table.Row>
     );
 }

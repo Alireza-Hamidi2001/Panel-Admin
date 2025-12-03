@@ -6,16 +6,16 @@ const Tag = styled.p`
     text-transform: uppercase;
     font-size: 1.1rem;
     font-weight: 500;
-    padding: 0.4rem 1.2rem;
+    padding: 0.2rem 1.2rem;
     border-radius: 100px;
-    text-align: center;
-    margin: 0 auto;
+    text-align: left;
+
+    /* border-right: 1px solid var(--color-main-border); */
 
     /* Make these dynamic, based on the received prop */
     color: ${(props) => `var(--color-${props.type}-700)`};
     background-color: ${(props) => `var(--color-${props.type}-100)`};
-    border: 1px solid ${(props) => `var(--color-${props.type}-300)`};
-    box-shadow: 0 0 0.5rem
+    box-shadow: 0 0 0.3rem
         ${(props) => `var(--color-${props.type}-700)`};
 
     ${respond('tab-port')`
@@ -28,6 +28,7 @@ const Tag = styled.p`
         padding: 0 0.5rem;
         box-shadow: none
     `}
+
 `;
 
 export default Tag;

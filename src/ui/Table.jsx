@@ -27,11 +27,10 @@ const StyledHeader = styled(CommonRow)`
     background-color: var(--color-main-dark);
     text-transform: uppercase;
     letter-spacing: 0.4px;
-    font-weight: 700;
     color: var(--color-light-200);
-    font-family: 'open-sans';
-    /* letter-spacing: 3px; */
-    text-align: center;
+    font-family: 'Lime';
+    text-align: left;
+    letter-spacing: 1px;
     font-size: 1.4rem;
 
     ${respond('tab-port')`
