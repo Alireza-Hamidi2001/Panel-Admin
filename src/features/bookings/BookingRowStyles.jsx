@@ -129,6 +129,7 @@ const StackedTwo = styled.p`
 
 const Amount = styled.div`
     display: flex;
+    align-items: center;
     gap: 0.5rem;
     text-align: left;
     font-family: 'KottaOne';
