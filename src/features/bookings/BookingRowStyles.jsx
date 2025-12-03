@@ -40,7 +40,7 @@ const StackedOne = styled.div`
         grid-template-columns: auto 1fr;
         align-items: center;
         gap: 0.5rem;
-        
+
         ${respond('tab-port')`
             font-size: 0.7rem;
             gap: 0.3rem;
@@ -76,7 +76,6 @@ const StackedTwo = styled.p`
         font-weight: 500;
         font-size: 1.4rem;
         color: var(--color-dark-300);
-
         display: flex;
         gap: 0.2rem;
 
@@ -85,19 +84,28 @@ const StackedTwo = styled.p`
             grid-template-columns: auto 1fr;
             align-items: center;
             gap: 0.5rem;
+            font-size: 1.3rem;
 
+            ${respond('tab-land')`
+                font-size: 0.8rem;
+                gap: 0.3rem;
+            `}
             ${respond('tab-port')`
-            font-size: 0.6rem;
-            flex-direction:column;
-            gap: 0.3rem;
-        `}
+                font-size: 0.6rem;
+                gap: 0.3rem;
+                `}
         }
 
+        ${respond('tab-land')`
+            font-size: 0.8rem;
+            // flex-direction:column;
+        `}
         ${respond('tab-port')`
             font-size: 0.8rem;
+        `}
+        ${respond('phone')`
             flex-direction:column;
         `}
-
     }
 
     & span:last-child {
@@ -108,7 +116,10 @@ const StackedTwo = styled.p`
         grid-template-columns: auto 1fr;
         align-items: center;
         gap: 0.3rem;
-        
+
+        ${respond('tab-land')`
+            font-size: 0.7rem;
+        `};
         ${respond('tab-port')`
             font-size: 0.4rem;
             gap: 0.2rem;

@@ -10,7 +10,7 @@ const StyledTable = styled.div`
     margin: 0 auto;
     overflow: hidden;
     width: 100%;
-    box-shadow: 0 0 1rem black;
+    box-shadow: 0 0 0.5rem var(--color-main-light);
     margin-bottom: 3rem;
 `;
 
@@ -20,6 +20,13 @@ const CommonRow = styled.div`
     column-gap: 2.4rem;
     align-items: center;
     transition: none;
+    
+    ${respond('tab-land')`
+        column-gap: 1.8rem;
+        `}
+    ${respond('tab-port')`
+        column-gap: 1rem;
+    `}
 `;
 
 const StyledHeader = styled(CommonRow)`
