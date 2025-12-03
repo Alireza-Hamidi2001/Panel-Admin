@@ -3,14 +3,14 @@ import styled, { css } from 'styled-components';
 import { respond } from '../utils/mixins';
 
 const StyledFilter = styled.div`
-    border: 1px solid var(--color-main-light);
-    background-color: var(--color-main-dark);
-    box-shadow: var(--shadow-sm);
+    /* border: 1px solid var(--color-main-light); */
+    /* background-color: var(--color-main-dark); */
+    /* box-shadow: 0 0 0.5rem var(--color-main-dark); */
     border-radius: 4px;
     padding: 0.4rem;
     display: flex;
-    gap: 0.8rem;
-    box-shadow: 0 0 0.5rem var(--color-main-dark);
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--color-main-border);
 
     ${respond('phone')`
         padding: 0.2rem;
@@ -23,8 +23,9 @@ const StyledFilter = styled.div`
 `;
 
 const FilterButton = styled.button`
-    background-color: var(--color-main-dark);
-    color: var(--color-light-100);
+    /* background-color: var(--color-main-dark); */
+    background: transparent;
+    color: var(--color-dark-300);
     border: none;
     cursor: pointer;
     text-transform: capitalize;
@@ -66,8 +67,11 @@ function Filter({ filterField, options }) {
         searchParams.get(filterField) || options.at(0).value;
 
     function handleClick(value) {
-        searchParams.set(filterField, value);
-        setSearchParams(searchParams);
+        // searchParams.set(filterField, value);
+        // setSearchParams(searchParams);
+        const newParams = new URLSearchParams(searchParams);
+        newParams.set(filterField, value);
+        setSearchParams(newParams);
     }
 
     return (
