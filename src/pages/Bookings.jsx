@@ -8,10 +8,10 @@ function Bookings() {
         <>
             <Row type="horizontal">
                 <Heading as="h1">All bookings</Heading>
-                {/* <p>TEST</p> */}
-                <Row type="filter">
-                    <BookingTableOperations />
-                </Row>
+            </Row>
+            {/* <p>TEST</p> */}
+            <Row type="filter">
+                <BookingTableOperations />
             </Row>
             <BookingTable />
         </>
