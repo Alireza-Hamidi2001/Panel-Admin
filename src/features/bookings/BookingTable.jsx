@@ -8,6 +8,7 @@ import { LoaderWrapper } from '../cabins/CabinTable';
 
 // ICONS
 import { AiOutlineDash } from 'react-icons/ai';
+import Pagination from '../../ui/Pagination';
 
 function BookingTable() {
     // const bookings = [];
@@ -46,6 +47,9 @@ function BookingTable() {
                         />
                     )}
                 />
+                <Table.Footer>
+                    <Pagination count={15} />
+                </Table.Footer>
             </Table>
         </Menus>
     );

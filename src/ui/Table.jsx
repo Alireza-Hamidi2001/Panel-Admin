@@ -20,7 +20,7 @@ const CommonRow = styled.div`
     column-gap: 2.4rem;
     align-items: center;
     transition: none;
-    
+
     ${respond('tab-land')`
         column-gap: 1.8rem;
         `}
@@ -56,7 +56,7 @@ const StyledRow = styled(CommonRow)`
 
     ${respond('tab-port')`
         padding: 1rem 1.5rem;
-        `}
+    `}
 
     &:not(:last-child) {
         border-bottom: 1px solid var(--color-main-border);
@@ -68,7 +68,8 @@ const StyledBody = styled.section`
 `;
 
 const Footer = styled.footer`
-    background-color: var(--color-dark-50);
+    background-color: var(--color-main-dark);
+    color: var(--color-white);
     display: flex;
     justify-content: center;
     padding: 1.2rem;

@@ -45,7 +45,8 @@ function MainNav() {
         &.active:link,
         &.active:visited {
             color: var(--color-light);
-            background-color: var(--color-main-dark);
+            background-color: var(--color-main-light);
+            border-left: 5px solid var(--color-main-dark);
         }
 
         & svg {

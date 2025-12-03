@@ -10,6 +10,7 @@ const StyledFilter = styled.div`
     padding: 0.4rem;
     display: flex;
     gap: 0.5rem;
+    background: var(--color-white);
     border-bottom: 1px solid var(--color-main-border);
 
     ${respond('phone')`
@@ -33,9 +34,8 @@ const FilterButton = styled.button`
     ${(props) =>
         props.active &&
         css`
-            background-color: var(--color-main-light);
-            color: var(--color-light-100);
-            font-style: italic;
+            background-color: var(--color-primary-100);
+            color: var(--color-white);
         `}
 
     border-radius: 2px;
@@ -55,8 +55,8 @@ const FilterButton = styled.button`
             `}
 
     &:hover:not(:disabled) {
-        background-color: var(--color-main-light);
-        color: var(--color-light-100);
+        background-color: var(--color-primary-50);
+        color: var(--color-white);
     }
 `;
 
