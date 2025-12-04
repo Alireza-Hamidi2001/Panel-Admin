@@ -24,20 +24,20 @@ const sizes = {
 const variations = {
     primary: css`
         color: var(--color-white);
-        background-color: var(--color-primary-300);
-        font-family: 'KottaOne';
+        background-color: var(--color-primary-200);
+        font-family: 'open-sans';
         position: relative;
         padding: 0.8rem 2rem;
         font-size: 1.4rem;
         top: 0;
         transition: all 0.2s;
-
+        
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
 
-        min-width: 8rem;
+        min-width: 15rem;
         min-height: 1.8rem;
 
         ${respond('tab-port')`

@@ -3,15 +3,12 @@ import styled, { css } from 'styled-components';
 import { respond } from '../utils/mixins';
 
 const StyledFilter = styled.div`
-    /* border: 1px solid var(--color-main-light); */
-    /* background-color: var(--color-main-dark); */
-    /* box-shadow: 0 0 0.5rem var(--color-main-dark); */
     border-radius: 4px;
-    padding: 0.4rem;
+    padding: 0.5rem;
     display: flex;
-    gap: 0.5rem;
-    background: var(--color-white);
-    border-bottom: 1px solid var(--color-main-border);
+    gap: 0.8rem;
+    /* background: var(--color-white); */
+    background: transparent;
 
     ${respond('phone')`
         padding: 0.2rem;
@@ -24,18 +21,28 @@ const StyledFilter = styled.div`
 `;
 
 const FilterButton = styled.button`
-    /* background-color: var(--color-main-dark); */
     background: transparent;
     color: var(--color-dark-300);
     border: none;
     cursor: pointer;
     text-transform: capitalize;
+    font-family: 'open-sans';
+    word-spacing: 2px;
 
     ${(props) =>
         props.active &&
         css`
-            background-color: var(--color-primary-100);
+            background-color: var(--color-primary-50);
             color: var(--color-white);
+            outline: 1px solid var(--color-primary-50);
+            outline-offset: 3px;
+
+            ${respond('tab-port')`
+                outline-offset: 2px;
+            `}
+            ${respond('phone')`
+                outline-offset: 1px;
+            `}
         `}
 
     border-radius: 2px;

@@ -11,7 +11,7 @@ const StyledTable = styled.div`
     overflow: hidden;
     width: 100%;
     margin-bottom: 3rem;
-    border: 1px solid var(--color-main-border);
+    border: 1px solid var(--color-light-300);
 `;
 
 const CommonRow = styled.div`
@@ -31,14 +31,14 @@ const CommonRow = styled.div`
 
 const StyledHeader = styled(CommonRow)`
     padding: 1rem 2.4rem;
-    background-color: var(--color-main);
+    background-color: var(--color-light-200);
     text-transform: uppercase;
-    letter-spacing: 0.4px;
-    color: var(--color-light-200);
+    /* letter-spacing: 0.4px; */
+    color: var(--color-dark-300);
     text-align: left;
     font-weight: 600;
     font-size: 1.5rem;
-    border: 1px solid var(--color-main-border);
+    border: 1px solid var(--color-light-300);
 
     ${respond('tab-port')`
         font-size: var(--font-tab);
@@ -52,24 +52,25 @@ const StyledHeader = styled(CommonRow)`
 const StyledRow = styled(CommonRow)`
     padding: 2rem 3rem;
     background-color: #fff;
-    text-align: center;
+    text-align: left;
 
     ${respond('tab-port')`
         padding: 1rem 1.5rem;
     `}
 
     &:not(:last-child) {
-        border-bottom: 1px solid var(--color-main-border);
+        border-bottom: 1px solid var(--color-light-100);
     }
 `;
 
 const StyledBody = styled.section`
     /* margin: 0.4rem 0; */
+    text-align: left;
 `;
 
 const Footer = styled.footer`
-    background-color: var(--color-main-dark);
-    color: var(--color-white);
+    background-color: var(--color-light-200);
+    color: var(--color-dark-300);
     display: flex;
     justify-content: center;
     padding: 1rem;

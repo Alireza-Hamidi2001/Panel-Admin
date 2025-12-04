@@ -9,9 +9,8 @@ const Img = styled.img`
     object-position: center;
     transform: scale(1.5);
     cursor: pointer;
-    box-shadow: 0 0 0.5rem black;
+    box-shadow: 0 0 0.3rem var(--color-dark-300);
     transition: all 0.2s;
-    margin: 0 auto;
 
     &:hover {
         transform: scale(1.7) translateX(4px);
@@ -26,10 +25,10 @@ const Img = styled.img`
 `;
 
 const Cabin = styled.div`
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: var(--color-dark-300);
-    font-family: 'KottaOne';
+    font-family: 'Edu';
 
     ${respond('tab-port')`
     font-size: var(--font-tab);
@@ -40,8 +39,8 @@ const Cabin = styled.div`
 `;
 
 const Capacity = styled.div`
-    font-family: 'KottaOne';
-    font-size: 1.6rem;
+    font-family: 'open-sans';
+    font-size: 1.5rem;
     font-weight: 500;
 
     ${respond('tab-port')`
@@ -54,7 +53,7 @@ const Capacity = styled.div`
 `;
 
 const Price = styled.div`
-    font-family: 'KottaOne';
+    font-family: 'noto';
     font-size: 1.6rem;
     font-weight: 500;
 
@@ -68,11 +67,11 @@ const Price = styled.div`
 
 const Discount = styled.div`
     text-align: center;
-    font-family: 'KottaOne';
+    font-family: 'noto';
     font-weight: 500;
     color: var(--color-green-500);
 
-    text-align: center;
+    text-align: left;
 
     & > p:first-child {
         color: var(--color-dark-300);

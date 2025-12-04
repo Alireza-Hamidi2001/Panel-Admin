@@ -20,7 +20,6 @@ function MainNav() {
     `;
     const NavLink_text = styled.p`
         display: block;
-        padding: 0;
 
         ${respond('phone')`
             display:none;
@@ -33,11 +32,11 @@ function MainNav() {
             align-items: center;
             gap: 1.2rem;
 
-            color: var(--color-font-light);
+            color: var(--color-dark-100);
             text-decoration: none;
             font-size: 1.6rem;
             font-weight: 500;
-            padding: 1.2rem 0rem;
+            padding: 1.2rem 1rem;
             transition: all 0.3s;
 
             ${respond('phone')`
@@ -52,9 +51,8 @@ function MainNav() {
         &:active,
         &.active:link,
         &.active:visited {
-            color: var(--color-light);
-            background-color: var(--color-main-light);
-            border-left: 5px solid var(--color-main-dark);
+            color: var(--color-dark-300);
+            background-color: var(--color-primary-0);
 
             ${respond('phone')`
                 border-left: none;

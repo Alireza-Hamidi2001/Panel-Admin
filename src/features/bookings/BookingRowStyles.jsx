@@ -4,9 +4,9 @@ import { respond } from '../../utils/mixins';
 const Cabin = styled.p`
     font-size: 1.6rem;
     font-weight: 600;
-    color: var(--color-dark-300);
+    color: var(--color-dark-100);
     font-family: 'KottaOne';
-    text-align: center;
+    text-align: left;
     border-right: 1px solid var(--color-main-border);
 
     ${respond('tab-port')`
@@ -30,8 +30,8 @@ const StackedOne = styled.div`
         `}
 
     & span:first-child {
-        font-weight: 500;
-        font-size: 1.4rem;
+        font-weight: 600;
+        font-size: 1.6rem;
         color: var(--color-dark-300);
 
         text-align: left;
@@ -48,8 +48,8 @@ const StackedOne = styled.div`
     }
 
     & span:last-child {
-        color: var(--color-dark-200);
-        font-size: 1.2rem;
+        color: var(--color-dark-100);
+        font-size: 1.3rem;
 
         display: flex;
         align-items: center;
@@ -85,6 +85,7 @@ const StackedTwo = styled.p`
             align-items: center;
             gap: 0.5rem;
             font-size: 1.3rem;
+            font-weight: 600;
 
             ${respond('tab-land')`
                 font-size: 0.8rem;
@@ -109,7 +110,7 @@ const StackedTwo = styled.p`
     }
 
     & span:last-child {
-        color: var(--color-dark-200);
+        color: var(--color-dark-100);
         font-size: 1.2rem;
 
         display: grid;
@@ -130,10 +131,12 @@ const StackedTwo = styled.p`
 const Amount = styled.div`
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: start;
+
+    gap: 0.6rem;
     text-align: left;
-    font-family: 'KottaOne';
-    font-size: 1.3rem;
+    font-family: 'noto';
+    font-size: 1.6rem;
     font-weight: 500;
 
     ${respond('tab-port')`

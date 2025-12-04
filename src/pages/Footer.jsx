@@ -14,7 +14,8 @@ function Footer() {
     `;
 
     const CopyrightText2 = styled.p`
-        font-family: 'KottaOne';
+        font-family: 'open-sans';
+        font-style: italic;
         font-size: 1.4rem;
         font-weight: 400;
 

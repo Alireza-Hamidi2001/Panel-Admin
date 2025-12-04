@@ -80,7 +80,7 @@ function BookingRow({
             </Tag>
 
             <Amount>
-                <IoMdPricetags className="icons_booking" />
+                <IoMdPricetags className="icons_booking-amount" />
                 {formatCurrency(totalPrice)}
             </Amount>
         </Table.Row>

@@ -3,14 +3,15 @@ import { respond } from '../utils/mixins';
 
 const StyledSelect = styled.select`
     font-size: 1.4rem;
-    padding: 0.84rem 0.8rem;
+    padding: 0.5rem 1rem;
     /* border: 1px solid */
-    border: 1px solid var(--color-main-light);
-    background-color: var(--color-main-dark);
+    border: 1px solid var(--color-primary-300);
+    background-color: var(--color-primary-100);
     color: var(--color-light-100);
     box-shadow: 0 0 0.5rem var(--color-main-dark);
     border-radius: 4px;
     font-weight: 500;
+    font-family: 'open-sans';
     box-shadow: 0 0 0.7rem var(--color-cream-400);
 
     &:focus {

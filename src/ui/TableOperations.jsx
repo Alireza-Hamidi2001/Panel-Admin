@@ -4,7 +4,7 @@ import { respond } from '../utils/mixins';
 const TableOperations = styled.div`
     display: flex;
     align-items: center;
-    gap: 0.8rem;
+    gap: 2.4rem;
 
     ${respond('tab-port')`
         justify-content: space-between;
