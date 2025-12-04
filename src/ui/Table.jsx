@@ -10,8 +10,8 @@ const StyledTable = styled.div`
     margin: 0 auto;
     overflow: hidden;
     width: 100%;
-    box-shadow: 0 0 0.5rem var(--color-main-light);
     margin-bottom: 3rem;
+    border: 1px solid var(--color-main-border);
 `;
 
 const CommonRow = styled.div`
@@ -30,15 +30,15 @@ const CommonRow = styled.div`
 `;
 
 const StyledHeader = styled(CommonRow)`
-    padding: 1.6rem 2.4rem;
-    background-color: var(--color-main-dark);
+    padding: 1rem 2.4rem;
+    background-color: var(--color-main);
     text-transform: uppercase;
     letter-spacing: 0.4px;
     color: var(--color-light-200);
-    font-family: 'Lime';
     text-align: left;
-    letter-spacing: 1px;
-    font-size: 1.4rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    border: 1px solid var(--color-main-border);
 
     ${respond('tab-port')`
         font-size: var(--font-tab);
@@ -72,7 +72,7 @@ const Footer = styled.footer`
     color: var(--color-white);
     display: flex;
     justify-content: center;
-    padding: 1.2rem;
+    padding: 1rem;
 
     /* This will hide the footer when it contains no child elements. Possible thanks to the parent selector :has 🎉 */
     &:not(:has(*)) {
