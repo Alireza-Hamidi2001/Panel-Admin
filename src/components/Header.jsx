@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { respond } from '../utils/mixins';
 import logo from './../assets/images/alireza3.png';
+import HeaderMenu from '../ui/HeaderMenu';
+import UserAvatar from '../features/authentication/UserAvatar';
 
 const Header_styled = styled.header`
     background-color: var(--color-white);
@@ -9,9 +11,14 @@ const Header_styled = styled.header`
     font-size: 1.5rem;
     padding: 2rem;
 
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: space-between;
+
+    ${respond('phone')`
+        grid-template-columns: 1fr 1fr 1fr;
+    `}
 `;
 
 const Img = styled.img`
@@ -22,17 +29,12 @@ const Img = styled.img`
         width: 16rem;
     `}
 `;
-const P = styled.p`
-    display: block;
-    ${respond('phone')`
-        display:none;
-    `}
-`;
 
 function Header() {
     return (
         <Header_styled>
-            <P>Header</P>
+            <UserAvatar />
+            <HeaderMenu />
             <Img src={logo} />
         </Header_styled>
     );

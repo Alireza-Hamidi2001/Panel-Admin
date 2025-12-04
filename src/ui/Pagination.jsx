@@ -49,9 +49,8 @@ const PaginationButton = styled.button`
             ? ' var(--color-primary-100)'
             : 'var(--color-primary-200)'};
     color: ${(props) =>
-        props.active ? ' var(--color-brand-50)' : 'inherit'};
+        props.active ? ' var(--color-white)' : 'var(--color-white)'};
     border: none;
-    border-radius: var(--border-radius-sm);
     font-weight: 500;
     font-size: 1.6rem;
 
@@ -88,7 +87,7 @@ const PaginationButton = styled.button`
 
     &:hover:not(:disabled) {
         background-color: var(--color-primary-100);
-        color: var(--color-brand-50);
+        color: var(--color-white);
     }
 
     &:disabled {
