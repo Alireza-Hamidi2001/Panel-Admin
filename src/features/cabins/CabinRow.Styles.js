@@ -26,9 +26,9 @@ const Img = styled.img`
 
 const Cabin = styled.div`
     font-size: 1.4rem;
-    font-weight: 600;
-    color: var(--color-dark-300);
-    font-family: 'Edu';
+    font-weight: 500;
+    color: var(--color-dark-100);
+    font-family: 'noto';
 
     ${respond('tab-port')`
     font-size: var(--font-tab);
@@ -39,9 +39,13 @@ const Cabin = styled.div`
 `;
 
 const Capacity = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     font-family: 'open-sans';
     font-size: 1.5rem;
     font-weight: 500;
+    font-style: italic;
 
     ${respond('tab-port')`
         font-size: var(--font-tab);
@@ -91,6 +95,12 @@ const Discount = styled.div`
         `}
     }
 `;
+
+const Discount_P = styled.p`
+    color: red;
+`;
+
+
 const ButtonsContainer = styled.div``;
 const Button = styled.button`
     background: transparent;
@@ -118,4 +128,5 @@ export {
     ButtonsContainer,
     Button,
     Capacity,
+    Discount_P,
 };

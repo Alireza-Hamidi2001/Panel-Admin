@@ -1,4 +1,15 @@
 import { useState } from 'react';
+import {
+    Button,
+    ButtonsContainer,
+    Cabin,
+    Capacity,
+    Discount,
+    Discount_P,
+    Img,
+    Price,
+    // TableRow,
+} from './CabinRow.Styles';
 
 import {
     deleteCabin,
@@ -9,21 +20,9 @@ import { formatCurrency } from '../../utils/helpers';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import toast from 'react-hot-toast';
 
-import { IoDuplicateOutline } from 'react-icons/io5';
-import { FaRegTrashAlt } from 'react-icons/fa';
-import DeleteModal from '../../components/DeleteModal';
-import {
-    Button,
-    ButtonsContainer,
-    Cabin,
-    Capacity,
-    Discount,
-    Img,
-    Price,
-    // TableRow,
-} from './CabinRow.Styles';
-import Modal from '../../ui/Modal';
-import { FaTrashCan } from 'react-icons/fa6';
+import { PiNotePencil } from 'react-icons/pi';
+import { AiOutlineSmallDash } from 'react-icons/ai';
+
 import DeleteCabins from './DeleteCabins';
 import ModalDuplicate from '../../components/ModalDuplicate';
 import Table from '../../ui/Table';
@@ -93,7 +92,10 @@ function CabinRow({ cabin }) {
             <Table.Row>
                 <Img src={image} />
                 <Cabin>{name}</Cabin>
-                <Capacity>Fits up to {maxCapacity} guests</Capacity>
+                <Capacity>
+                    <PiNotePencil />
+                    Fits up to {maxCapacity} guests
+                </Capacity>
                 <Price>{formatCurrency(regularPrice)}</Price>
                 <Discount>
                     {discount !== 0 ? (
@@ -102,7 +104,9 @@ function CabinRow({ cabin }) {
                             <p>{formatCurrency(finalPrice)}</p>
                         </>
                     ) : (
-                        <p>&#8212;</p>
+                        <Discount_P>
+                            <AiOutlineSmallDash />
+                        </Discount_P>
                     )}
                 </Discount>
                 <ButtonsContainer>
