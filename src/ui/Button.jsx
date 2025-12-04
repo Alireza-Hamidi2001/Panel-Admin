@@ -23,8 +23,8 @@ const sizes = {
 
 const variations = {
     primary: css`
-        color: var(--color-gold-dark);
-        background-color: var(--color-gold);
+        color: var(--color-white);
+        background-color: var(--color-primary-300);
         font-family: 'KottaOne';
         position: relative;
         padding: 0.8rem 2rem;

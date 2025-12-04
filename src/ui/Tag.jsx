@@ -25,7 +25,6 @@ const Tag = styled.p`
         `}
     ${respond('phone')`
         font-size: 0.5rem;
-        padding: 0 0.5rem;
         box-shadow: none
     `}
 

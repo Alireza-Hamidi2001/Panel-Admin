@@ -6,24 +6,32 @@ import { HiChevronRight } from 'react-icons/hi';
 import { FaThList } from 'react-icons/fa';
 import { useSearchParams } from 'react-router-dom';
 import { PAGE_SIZE } from '../utils/constanse';
+import { respond } from '../utils/mixins';
 
 const StyledPagination = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    ${respond('phone')`
+        
+    `}
 `;
 
 const P = styled.p`
     font-size: 1.6rem;
     margin-left: 0.8rem;
-
+    
     display: flex;
     align-items: center;
     gap: 0.6rem;
 
-    font-family: 'StoryScript';
-    letter-spacing: 1px;
+    font-family: 'open-sans';
+
+    ${respond('phone')`
+        font-size: 1.2rem;
+`}
 
     & span {
         font-weight: 600;
@@ -61,6 +69,10 @@ const PaginationButton = styled.button`
 
     cursor: pointer;
 
+    ${respond('phone')`
+        font-size: 1.2rem;
+`}
+
     &:has(span:last-child) {
         padding-left: 0.4rem;
     }
@@ -84,7 +96,6 @@ const PaginationButton = styled.button`
         opacity: 0.5;
     }
 `;
-
 
 function Pagination({ count }) {
     const [searchParams, setSearchParams] = useSearchParams();

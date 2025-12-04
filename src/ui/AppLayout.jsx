@@ -16,7 +16,7 @@ function AppLayout() {
             grid-template-columns: 20rem 1fr;
         `}
         ${respond('phone')`
-            grid-template-columns: 15rem 1fr;
+            grid-template-columns: auto 1fr;
         `}
     `;
 
@@ -27,10 +27,9 @@ function AppLayout() {
         overflow: auto;
 
         ${respond('tab-port')`
-            padding: 2rem;
+            padding: 3rem;
         `}
         ${respond('phone')`
-            padding: 1.5rem;
         `}
     `;
 

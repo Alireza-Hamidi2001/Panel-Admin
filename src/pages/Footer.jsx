@@ -8,6 +8,9 @@ function Footer() {
         ${respond('tab-port')`
             padding: 1.5rem
         `}
+        ${respond('phone')`
+            display:none;
+        `}
     `;
 
     const CopyrightText2 = styled.p`

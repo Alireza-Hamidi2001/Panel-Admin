@@ -22,7 +22,7 @@ function Logo() {
             height: 4rem;
         `}
         ${respond('phone')`
-            height: 3.5rem;
+            display:none;
         `}
     `;
 

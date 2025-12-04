@@ -18,7 +18,14 @@ function MainNav() {
         margin-top: 4rem;
         margin-bottom: auto;
     `;
+    const NavLink_text = styled.p`
+        display: block;
+        padding: 0;
 
+        ${respond('phone')`
+            display:none;
+        `}
+    `;
     const NavLink_Styled = styled(NavLink)`
         &:link,
         &:visited {
@@ -30,13 +37,14 @@ function MainNav() {
             text-decoration: none;
             font-size: 1.6rem;
             font-weight: 500;
-            padding: 1.2rem 2.4rem;
+            padding: 1.2rem 0rem;
             transition: all 0.3s;
 
             ${respond('phone')`
-                padding:  1.2rem;
-                font-size: 1.4rem;
-            `}
+            gap: 0;
+            padding: 1.2rem 1rem;
+            justify-content: center;
+`}
         }
 
         /* This works because react-router places the active class on the active NavLink */
@@ -47,6 +55,10 @@ function MainNav() {
             color: var(--color-light);
             background-color: var(--color-main-light);
             border-left: 5px solid var(--color-main-dark);
+
+            ${respond('phone')`
+                border-left: none;
+            `}
         }
 
         & svg {
@@ -70,35 +82,35 @@ function MainNav() {
                 <li>
                     <NavLink_Styled to="/dashboard">
                         <GoHome className="icons_sidebar" />
-                        Home
+                        <NavLink_text>Home</NavLink_text>
                     </NavLink_Styled>
                 </li>
                 <li>
                     <NavLink_Styled to="/bookings">
                         <HiOutlineCalendarDateRange className="icons_sidebar" />
-                        Bookings
+                        <NavLink_text>Bookings</NavLink_text>
                     </NavLink_Styled>
                 </li>
                 <li>
                     <NavLink_Styled to="/cabins">
                         <BsBuildings className="icons_sidebar" />
-                        Cabins
+                        <NavLink_text>Cabins</NavLink_text>
                     </NavLink_Styled>
                 </li>
                 <li>
                     <NavLink_Styled to="/users">
                         <HiOutlineUsers className="icons_sidebar" />
-                        Users
+                        <NavLink_text>Users</NavLink_text>
                     </NavLink_Styled>
                 </li>
                 <li>
                     <NavLink_Styled to="/settings">
                         <TbSettings2 className="icons_sidebar" />
-                        Settings
+                        <NavLink_text>Settings</NavLink_text>
                     </NavLink_Styled>
                 </li>
             </NavList>
-            <Uploader />
+            {/* <Uploader /> */}
         </nav>
     );
 }

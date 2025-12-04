@@ -19,6 +19,8 @@ const Sidebar_Styled = styled.aside`
     `}
     ${respond('phone')`
         padding:2rem 0.5rem;
+        width: 6rem;
+
     `}
 `;
 
