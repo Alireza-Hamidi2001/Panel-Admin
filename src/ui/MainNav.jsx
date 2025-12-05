@@ -16,7 +16,7 @@ function MainNav() {
         gap: 0.8rem;
         list-style: none;
         margin-top: 4rem;
-        margin-bottom: auto;
+        margin-bottom: 19rem;
     `;
     const NavLink_text = styled.p`
         display: block;

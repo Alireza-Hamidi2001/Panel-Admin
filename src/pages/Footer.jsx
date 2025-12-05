@@ -1,15 +1,28 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { respond } from '../utils/mixins';
 
-function Footer() {
+function Footer({ type }) {
     const FooterStyled = styled.footer`
-        margin-top: auto;
+        ${(props) =>
+            props.type === 'login' &&
+            css`
+                position: absolute;
+                left: 2rem;
+                bottom: 2rem;
+                /* margin-top: 10rem; */
+            `}
 
         ${respond('tab-port')`
             padding: 1.5rem
         `}
         ${respond('phone')`
             display:none;
+
+            ${(props) =>
+                props.type === 'login' &&
+                css`
+                    display: block;
+                `}
         `}
     `;
 
@@ -18,6 +31,7 @@ function Footer() {
         font-style: italic;
         font-size: 1.4rem;
         font-weight: 400;
+        color: var(--color-dark-200);
 
         ${respond('tab-port')`
             font-size: 1.2rem;
@@ -34,11 +48,12 @@ function Footer() {
     `;
 
     const Copyright = styled.p`
-        font-family: 'KottaOne';
+        font-family: 'open-sans';
+        color: var(--color-dark-300);
     `;
 
     return (
-        <FooterStyled>
+        <FooterStyled type={type}>
             <Copyright>&copy; 2025</Copyright>
             <CopyrightText1> Alireza Hamidi</CopyrightText1>
             <CopyrightText2>

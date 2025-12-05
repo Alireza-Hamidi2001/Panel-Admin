@@ -11,3 +11,45 @@
         transform: translate(-50%, -50%);
     }
 }
+
+@keyframes firstBubble {
+    0% {
+        top: 30%;
+    }
+
+    50% {
+        top: 70%;
+    }
+
+    100% {
+        top: 30%;
+    }
+}
+
+@keyframes secondBubble {
+    0% {
+        bottom: 40%;
+    }
+
+    50% {
+        bottom: 90%;
+    }
+
+    100% {
+        bottom: 40%;
+    }
+}
+
+@keyframes thirdBubble {
+    0% {
+        top: 20%;
+    }
+
+    50% {
+        top: 40%;
+    }
+
+    100% {
+        top: 20%;
+    }
+}

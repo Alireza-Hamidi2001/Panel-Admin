@@ -1,6 +1,10 @@
 import styled, { css } from 'styled-components';
 
 const Form = styled.form`
+    overflow: hidden;
+    font-size: 1.4rem;
+    background: var(--color-cream-100);
+
     ${(props) =>
         props.type !== 'modal' &&
         css`
@@ -14,11 +18,6 @@ const Form = styled.form`
         css`
             width: 80rem;
         `}
-    
-
-    overflow: hidden;
-    font-size: 1.4rem;
-    background: var(--color-cream-100);
 `;
 
 export default Form;

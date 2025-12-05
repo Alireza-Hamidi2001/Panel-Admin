@@ -11,8 +11,9 @@ const Sidebar_Styled = styled.aside`
     grid-row: 1/-1;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    /* justify-content: start; */
 
+    
     ${respond('tab-port')`
         padding:2rem 1rem;
     `}

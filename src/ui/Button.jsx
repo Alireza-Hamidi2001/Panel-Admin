@@ -31,7 +31,7 @@ const variations = {
         font-size: 1.4rem;
         top: 0;
         transition: all 0.2s;
-        
+
         display: flex;
         justify-content: center;
         align-items: center;
@@ -52,6 +52,10 @@ const variations = {
 
         &:hover {
             top: -2px;
+        }
+
+        &:disabled {
+            filter: brightness(0.5);
         }
     `,
     secondary: css`
@@ -87,6 +91,22 @@ const variations = {
     duplicate: css`
         background: transparent;
         width: auto !important;
+    `,
+    login: css`
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        background: var(--color-font-light);
+        position: relative;
+        top: 0;
+        width: auto !important;
+        color: var(--color-dark-300);
+        transition: all 0.2s;
+        font-family: 'open-sans';
+        &:hover {
+            top: -2px;
+        }
     `,
 };
 

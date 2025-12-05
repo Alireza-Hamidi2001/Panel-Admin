@@ -39,10 +39,7 @@ function App() {
                         <Route
                             index
                             element={
-                                <Navigate
-                                    replace
-                                    to="dashboard"
-                                />
+                                <Navigate replace to="dashboard" />
                             }
                         />
                         <Route
@@ -53,31 +50,16 @@ function App() {
                             path="bookings"
                             element={<Bookings />}
                         />
-                        <Route
-                            path="cabins"
-                            element={<Cabins />}
-                        />
-                        <Route
-                            path="account"
-                            element={<Account />}
-                        />
+                        <Route path="cabins" element={<Cabins />} />
+                        <Route path="account" element={<Account />} />
                         <Route
                             path="settings"
                             element={<Settings />}
                         />
-                        <Route
-                            path="users"
-                            element={<Users />}
-                        />
-                        <Route
-                            path="login"
-                            element={<Login />}
-                        />
-                        <Route
-                            path="*"
-                            element={<PageNotFound />}
-                        />
+                        <Route path="users" element={<Users />} />
+                        <Route path="*" element={<PageNotFound />} />
                     </Route>
+                    <Route path="login" element={<Login />} />
                 </Routes>
             </BrowserRouter>
             <Toaster
@@ -88,8 +70,7 @@ function App() {
                     success: {
                         duration: 3000,
                         style: {
-                            background:
-                                'var(--color-green-50)',
+                            background: 'var(--color-green-50)',
                             color: 'var(--color-green-200)',
                             fontStyle: 'italic',
                             textTransform: 'capitalize',
@@ -98,8 +79,7 @@ function App() {
                     error: {
                         duration: 4000,
                         style: {
-                            background:
-                                'var(--color-red-50)',
+                            background: 'var(--color-red-50)',
                             color: 'var(--color-red-300)',
                             fontStyle: 'italic',
                             textTransform: 'capitalize',
