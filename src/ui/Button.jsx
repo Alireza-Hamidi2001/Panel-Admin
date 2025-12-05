@@ -26,16 +26,18 @@ const variations = {
         color: var(--color-white);
         background-color: var(--color-primary-200);
         font-family: 'open-sans';
+        font-family: sans-serif;
         position: relative;
-        padding: 0.8rem 2rem;
-        font-size: 1.4rem;
+        border-radius: 4px;
+        padding: 0.8rem;
+        width: max-content;
+        font-size: 1.6rem;
         top: 0;
         transition: all 0.2s;
 
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 0.5rem;
 
         min-width: 15rem;
         min-height: 1.8rem;
@@ -60,9 +62,12 @@ const variations = {
     `,
     secondary: css`
         color: var(--color-white);
-        background: var(--color-red-200);
-        border: 1px solid var(--color-grey-200);
-        font-family: 'KottaOne';
+        /* background: var(--color-red-200); */
+        color: var(--color-dark-300);
+        border: 1px solid var(--color-light-300);
+        background: transparent;
+        border-radius: 4px;
+        font-family: 'open-sans';
         position: relative;
         top: 0;
         transition: all 0.1s;
@@ -88,9 +93,19 @@ const variations = {
         background: transparent;
         width: auto !important;
     `,
-    duplicate: css`
-        background: transparent;
-        width: auto !important;
+    loginbtn: css`
+        background: var(--color-primary-100);
+        border-radius: 4px;
+        color: var(--color-white);
+        font-size: 1.6rem !important;
+        font-family: 'open-sans';
+        position: relative;
+        top: 0;
+        transition: all 0.2s;
+
+        &:hover {
+            top: -2px;
+        }
     `,
     login: css`
         display: flex;
@@ -98,12 +113,14 @@ const variations = {
         justify-content: center;
         gap: 1rem;
         background: var(--color-font-light);
-        position: relative;
-        top: 0;
+        font-family: 'open-sans';
         width: auto !important;
         color: var(--color-dark-300);
+
+        position: relative;
+        top: 0;
         transition: all 0.2s;
-        font-family: 'open-sans';
+
         &:hover {
             top: -2px;
         }
@@ -112,10 +129,8 @@ const variations = {
 
 const StyledButton = styled.button`
     border: none;
-    border-radius: 2px;
     cursor: pointer;
     transition: all 0.2s;
-    /* max-width: 13rem; */
 
     &:disabled {
         filter: grayscale(0.8);
@@ -135,6 +150,7 @@ function Button({
     variation = 'primary',
     size = 'medium',
     disabled,
+    type,
 }) {
     return (
         <StyledButton

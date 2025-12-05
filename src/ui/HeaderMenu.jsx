@@ -1,19 +1,21 @@
 import styled from 'styled-components';
 import ButtonIcon from './ButtonIcon';
 import { useNavigate } from 'react-router-dom';
-import { FiLogOut } from 'react-icons/fi';
 
+import { FaUser } from 'react-icons/fa';
 
 import { CiUser } from 'react-icons/ci';
+import Logout from '../features/authentication/Logout';
+import UserAvatar from '../features/authentication/UserAvatar';
 
 const StyledHeaderMenu = styled.ul`
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    justify-content: end;
 `;
 const List = styled.li`
-list-style: none;
-`
+    list-style: none;
+`;
 
 function HeaderMenu() {
     const navigate = useNavigate();
@@ -21,13 +23,15 @@ function HeaderMenu() {
         <StyledHeaderMenu>
             <List>
                 <ButtonIcon onClick={() => navigate('/account')}>
-                    <CiUser />
+                    <FaUser className="icons_user" />
                 </ButtonIcon>
             </List>
             <List>
-                <FiLogOut />
+                <Logout />
             </List>
-            {/* <li><LogOut /></li> */}
+            <List>
+                <UserAvatar />
+            </List>
         </StyledHeaderMenu>
     );
 }

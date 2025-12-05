@@ -10,7 +10,7 @@ export function useLogin() {
             login({ email, password }),
         onSuccess: (user) => {
             // console.log(user);
-            navigate('/dashboard');
+            navigate('/dashboard', { replace: true });
             toast.success('Login successfuly');
         },
         onError: (err) => {

@@ -30,6 +30,10 @@ const FormRow = styled.div`
     align-items: center;
     text-align: center;
     gap: 1rem;
+
+    &:nth-last-of-type(1) {
+        background: red !important;
+    }
     /* background: gold; */
 `;
 const FormRowLogin = styled.div`

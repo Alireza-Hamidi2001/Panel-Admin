@@ -5,7 +5,6 @@ const StyledFormRow = styled.div`
     align-items: center;
     grid-template-columns: 24rem 1fr 1.2fr;
     gap: 2.4rem;
-
     padding: 1.2rem 0;
 
     &:first-child {
@@ -14,6 +13,7 @@ const StyledFormRow = styled.div`
 
     &:last-child {
         padding-bottom: 0;
+        margin-top: 4rem;
     }
 
     &:not(:last-child) {
@@ -25,19 +25,11 @@ const StyledFormRow = styled.div`
         justify-content: flex-end;
         gap: 1.2rem;
     }
-    ${(props) => props.type === 'login' && css``}
-`;
-
-const Label = styled.label`
-    font-size: 1.6rem;
-    font-family: 'open-sans';
-    word-spacing: 4px;
-    color: var(--color-font-dark);
-
     ${(props) =>
-        props.type === 'login' &&
+        props.type === 'signup' &&
         css`
-            background: gold !important;
+            grid-template-columns: 1fr;
+            width: 60%;
         `}
 `;
 
@@ -46,14 +38,9 @@ const Error = styled.span`
     color: var(--color-red-700);
 `;
 
-function FormRow({ label, error, children }) {
+function FormRow({ error, children, type }) {
     return (
-        <StyledFormRow>
-            {label && (
-                <Label type="login" htmlFor={children?.props?.id}>
-                    {label}
-                </Label>
-            )}
+        <StyledFormRow type={type}>
             {children}
             {error && <Error>{error}</Error>}
         </StyledFormRow>

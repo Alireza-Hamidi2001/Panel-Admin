@@ -8,6 +8,26 @@
         color: var(--color-dark-300);
     }
 
+    &_user {
+        cursor: pointer;
+        transition: all 0.2s;
+        color: var(--color-dark-200) !important;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &_logout {
+        cursor: pointer;
+        transition: all 0.2s;
+        stroke: var(--color-dark-200);
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
     &_trash {
         color: var(--color-red-100);
         font-size: 2rem;
@@ -83,26 +103,25 @@
 
     &_booking {
         font-size: 1.2rem;
-        
+
         @include respond('tab-port') {
             font-size: 0.7rem;
         }
-        
+
         @include respond('phone') {
             font-size: 0.6rem;
         }
-        
-        &-amount{
-            font-size: 1.5rem;
 
+        &-amount {
+            font-size: 1.5rem;
         }
     }
 
-    &_login{
+    &_login {
         font-size: 2rem;
     }
 
-    &_auth{
+    &_auth {
         font-size: 2rem;
     }
 }

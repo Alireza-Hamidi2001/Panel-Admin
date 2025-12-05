@@ -11,8 +11,8 @@ function UpdateSettingsForm() {
     console.log(settings);
 
     const LoaderWrapper = styled.div`
-        position: fixed; /* تمام صفحه */
-        inset: 0; /* top, right, bottom, left = 0 */
+        position: fixed;
+        inset: 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -22,7 +22,7 @@ function UpdateSettingsForm() {
             0,
             0,
             0.2
-        ); /* اختیاری: کمی پوشش پشت لودر */
+        );
         z-index: 9999;
     `;
 

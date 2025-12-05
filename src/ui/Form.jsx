@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 const Form = styled.form`
     overflow: hidden;
     font-size: 1.4rem;
-    background: var(--color-cream-100);
+    background: var(--color-font-light);
 
     ${(props) =>
         props.type !== 'modal' &&
@@ -18,6 +18,17 @@ const Form = styled.form`
         css`
             width: 80rem;
         `}
+    ${(props) =>
+        props.type === 'signup' &&
+        css`
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            margin: 0 auto;
+            background: transparent;
+`}
 `;
 
 export default Form;

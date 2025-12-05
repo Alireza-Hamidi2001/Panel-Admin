@@ -41,14 +41,17 @@ function Login() {
     function handleSubmit(e) {
         e.preventDefault();
         if (!email || !password) return;
-        loginFn({ email, password });
-    }
-    if (isLoading)
-        return (
-            <LoaderWrapper>
-                <PropagateLoader size={13} speedMultiplier={2} />
-            </LoaderWrapper>
+        loginFn(
+            { email, password },
+            {
+                onSettled: () => {
+                    setEmail('');
+                    setPassword('');
+                },
+            }
         );
+    }
+
     return (
         <>
             <LoginLayout>
@@ -92,8 +95,9 @@ function Login() {
                     </FormRow>
                     <FormRow>
                         <Button
-                            variation="primary"
+                            variation="loginbtn"
                             disabled={isLoading}
+                            type="login"
                         >
                             {isLoading ? (
                                 <PropagateLoader

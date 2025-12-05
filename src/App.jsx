@@ -20,6 +20,7 @@ import {
 } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { Toaster } from 'react-hot-toast';
+import ProtectedRoute from './ui/ProtectedRoute';
 
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -35,7 +36,13 @@ function App() {
             <ReactQueryDevtools initialIsOpen="false" />
             <BrowserRouter>
                 <Routes>
-                    <Route element={<AppLayout />}>
+                    <Route
+                        element={
+                            <ProtectedRoute>
+                                <AppLayout />
+                            </ProtectedRoute>
+                        }
+                    >
                         <Route
                             index
                             element={
