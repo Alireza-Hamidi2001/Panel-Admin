@@ -29,7 +29,7 @@ const StyledFormRow = styled.div`
         props.type === 'signup' &&
         css`
             grid-template-columns: 1fr;
-            width: 60%;
+            /* width: 70%; */
         `}
 `;
 
