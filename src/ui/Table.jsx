@@ -42,11 +42,8 @@ const StyledHeader = styled(CommonRow)`
 
     ${respond('tab-port')`
         font-size: var(--font-tab);
-        padding: 0.8rem 1.2rem;
-        `}
-    ${respond('phone')`
-        font-size: var(--font-mobile);
-        `}
+        padding: 0.8rem 1.6rem;
+    `}
 `;
 
 const StyledRow = styled(CommonRow)`
