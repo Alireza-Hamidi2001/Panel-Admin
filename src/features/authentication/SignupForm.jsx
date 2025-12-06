@@ -56,7 +56,7 @@ function SignupForm() {
                 <Button variation="secondary" type="reset">
                     Cancel
                 </Button>
-                <Button>Create new user</Button>
+                <Button variation='primary'>Create new user</Button>
             </FormRow>
         </Form>
     );
