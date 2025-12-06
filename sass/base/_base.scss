@@ -26,6 +26,10 @@ html {
 
 body {
     font-family: 'open-sans';
+    &::selection{
+        background: var(--color-gold);
+        color: var(--color-black);
+    }
 }
 
 .demo {
