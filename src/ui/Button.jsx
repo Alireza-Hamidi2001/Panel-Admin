@@ -41,6 +41,7 @@ const variations = {
 
         ${respond('tab-port')`
             font-size: 1rem;
+            border-radius: 2px;
         `}
 
         &:hover {
