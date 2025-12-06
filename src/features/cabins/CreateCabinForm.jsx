@@ -19,6 +19,7 @@ import { IoPricetagsOutline } from 'react-icons/io5';
 import { RiDiscountPercentLine } from 'react-icons/ri';
 import { TbFileDescription } from 'react-icons/tb';
 import { IoIosImages } from 'react-icons/io';
+import { respond } from '../../utils/mixins';
 
 const FormRow = styled.div`
     display: grid;
@@ -45,18 +46,19 @@ const FormRow = styled.div`
         justify-content: flex-end;
         gap: 1.2rem;
     }
+
+    ${respond('tab-port')`
+        grid-template-columns: 1fr 1fr;
+        `}
 `;
 
 const Label = styled.label`
     font-size: 1.6rem;
-    font-family: 'KottaOne';
-    word-spacing: 4px;
     color: var(--color-font-dark);
-`;
 
-const Error = styled.div`
-    font-size: 1.4rem;
-    color: var(--color-red-700);
+    ${respond('phone')`
+        font-size: 1.4rem;
+        `}
 `;
 
 function CreateCabinForm({ setIsOpenModal }) {

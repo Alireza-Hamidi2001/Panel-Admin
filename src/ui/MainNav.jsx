@@ -51,7 +51,7 @@ function MainNav() {
         &:active,
         &.active:link,
         &.active:visited {
-            color: var(--color-dark-300);
+            color: var(--color-primary-50);
             background-color: var(--color-primary-0);
 
             ${respond('phone')`

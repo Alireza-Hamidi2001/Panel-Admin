@@ -24,7 +24,7 @@ const sizes = {
 const variations = {
     primary: css`
         color: var(--color-white);
-        background-color: var(--color-primary-100);
+        background-color: var(--color-primary-50);
         font-family: 'open-sans';
         position: relative;
         border-radius: 4px;
@@ -33,6 +33,7 @@ const variations = {
         font-size: 1.3rem;
         top: 0;
         transition: all 0.2s;
+        text-transform: capitalize;
 
         display: flex;
         justify-content: center;
@@ -40,7 +41,6 @@ const variations = {
         gap: 0.5rem;
 
         ${respond('tab-port')`
-            padding: 0.5rem;
             border-radius: 2px;
         `}
 
@@ -54,7 +54,6 @@ const variations = {
     `,
     secondary: css`
         color: var(--color-white);
-        /* background: var(--color-red-200); */
         color: var(--color-dark-300);
         border: 1px solid var(--color-light-300);
         background: transparent;
@@ -63,10 +62,10 @@ const variations = {
         position: relative;
         top: 0;
         transition: all 0.1s;
+        padding: 1rem;
 
         ${respond('tab-port')`
             font-size: 1.2rem;
-            padding: 0.7rem 1.4rem;
         `}
 
         &:hover {

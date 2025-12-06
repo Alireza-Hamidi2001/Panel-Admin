@@ -18,14 +18,12 @@ const FileInput = styled.input`
 
     &::file-selector-button {
         font: inherit;
-        padding: 0.8rem 1.2rem;
+        padding: 0.8rem;
         margin-right: 1.2rem;
-        font-family: 'KottaOne';
-        border-radius: 2px;
+        border-radius: 8px;
         border: none;
-        color: var(--color-black);
-        background-color: var(--color-gold-light);
-        letter-spacing: 1px;
+        color: var(--color-white);
+        background-color: var(--color-primary-100);
 
         cursor: pointer;
         transition: color 0.2s, background-color 0.2s;
