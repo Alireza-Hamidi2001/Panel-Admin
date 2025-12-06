@@ -18,7 +18,7 @@ const StyledDiv = styled.div`
 
     ${respond('phone')`
         grid-template-columns: 1fr;
-            `}
+    `}
 `;
 
 const H1 = styled.h1`
@@ -48,6 +48,10 @@ const Button_Delete = styled.button`
     &:hover {
         transform: scale(1.05);
     }
+
+    ${respond('phone')`
+        justify-self: stretch
+    `}
 `;
 
 export default function DeleteModal({ onDelete, isDeleting }) {
@@ -55,7 +59,6 @@ export default function DeleteModal({ onDelete, isDeleting }) {
         <StyledDiv>
             <div>
                 <H1>Delete Cabin</H1>
-                {/* <Text>This cabin will be permanently deleted.</Text> */}
                 <Text>
                     Do you really want to delete this room? This
                     action is irreversible and all associated data

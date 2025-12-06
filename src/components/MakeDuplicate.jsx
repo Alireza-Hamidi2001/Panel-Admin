@@ -8,8 +8,6 @@ import { respond } from '../utils/mixins';
 const StyledDiv = styled.div`
     background: var(--color-white);
     padding: 4rem;
-    width: 60%;
-    margin: 0 auto;
 
     display: grid;
     grid-template-columns: 1fr auto;
@@ -17,9 +15,12 @@ const StyledDiv = styled.div`
     justify-content: space-between;
     gap: 4rem;
 
+    width: 60%;
+    margin: 0 auto;
+
     ${respond('phone')`
-    grid-template-columns: 1fr;
-        `}
+        grid-template-columns: 1fr;
+    `}
 `;
 
 const H1 = styled.h1`
@@ -46,7 +47,7 @@ const ButtonContainer = styled.button`
 `;
 
 const Button_Delete = styled.button`
-    padding: 1rem;
+    padding: 1rem 1.2rem;
     font-size: 1.3rem;
     background: var(--color-primary-100);
     color: white;
@@ -58,6 +59,10 @@ const Button_Delete = styled.button`
     &:hover {
         transform: scale(1.05);
     }
+
+    ${respond('phone')`
+            justify-self: stretch
+        `}
 `;
 
 function MakeDuplicate({ onDuplicate, isDupliating, closeModal }) {
@@ -75,23 +80,21 @@ function MakeDuplicate({ onDuplicate, isDupliating, closeModal }) {
                     as the original
                 </Text>
             </div>
-            <ButtonContainer>
-                <Button_Delete
-                    disabled={isDupliating}
-                    onClick={handleClick}
-                    variation="primary"
-                >
-                    {isDupliating ? (
-                        <PulseLoader
-                            size={7}
-                            speedMultiplier={2}
-                            color="white"
-                        />
-                    ) : (
-                        'Confirm'
-                    )}
-                </Button_Delete>
-            </ButtonContainer>
+            <Button_Delete
+                disabled={isDupliating}
+                onClick={handleClick}
+                variation="primary"
+            >
+                {isDupliating ? (
+                    <PulseLoader
+                        size={7}
+                        speedMultiplier={2}
+                        color="white"
+                    />
+                ) : (
+                    'Confirm'
+                )}
+            </Button_Delete>
         </StyledDiv>
     );
 }
