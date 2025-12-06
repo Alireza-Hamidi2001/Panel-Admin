@@ -136,7 +136,7 @@ const Amount = styled.div`
     font-weight: 500;
 
     ${respond('tab-port')`
-        font-size: var(--font-mobile);
+        font-size: var(--font-tab);
     `}
 `;
 
