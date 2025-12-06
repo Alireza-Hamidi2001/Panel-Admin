@@ -23,11 +23,6 @@ const Tag = styled.p`
         padding: 0.2rem 0.6rem;
         box-shadow: none
         `}
-    ${respond('phone')`
-        font-size: 0.5rem;
-        box-shadow: none
-    `}
-
 `;
 
 export default Tag;

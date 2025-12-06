@@ -13,10 +13,6 @@ const Cabin = styled.p`
         font-size: var(--font-tab);
         border-right: none;
         `}
-    ${respond('phone')`
-        font-size: var(--font-mobile);
-        border-right: none;
-    `}
 `;
 
 const StackedOne = styled.div`
@@ -141,9 +137,6 @@ const Amount = styled.div`
 
     ${respond('tab-port')`
         font-size: var(--font-mobile);
-    `}
-    ${respond('phone')`
-        font-size: 0.8rem;
     `}
 `;
 
