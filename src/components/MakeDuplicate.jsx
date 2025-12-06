@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import Button from '../ui/Button';
 import { PulseLoader } from 'react-spinners';
 
-import { IoWarningOutline } from 'react-icons/io5';
 import { respond } from '../utils/mixins';
 
 const StyledDiv = styled.div`
@@ -10,13 +9,15 @@ const StyledDiv = styled.div`
     padding: 4rem;
 
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
     justify-content: space-between;
     gap: 4rem;
 
     width: 60%;
     margin: 0 auto;
+
+    box-shadow: 0 0 1rem var(--color-black);
 
     ${respond('phone')`
         grid-template-columns: 1fr;
@@ -27,6 +28,7 @@ const H1 = styled.h1`
     color: var(--color-primary-100);
     letter-spacing: 0;
     font-style: italic;
+    grid-column: 1 / -1;
 `;
 
 const Text = styled.p`
@@ -34,16 +36,13 @@ const Text = styled.p`
     font-weight: 500;
     color: var(--color-font-dark);
     font-family: 'open-sans';
+    color: var(--color-dark-300);
 
     display: flex;
     align-items: center;
     gap: 1rem;
 
-    margin-top: 2rem;
-`;
-
-const ButtonContainer = styled.button`
-    border: none;
+    grid-column: 1 / span 3;
 `;
 
 const Button_Delete = styled.button`
@@ -72,14 +71,12 @@ function MakeDuplicate({ onDuplicate, isDupliating, closeModal }) {
 
     return (
         <StyledDiv>
-            <div>
                 <H1>Dupliacte Cabin</H1>
                 <Text>
                     Are you sure you want to duplicate this cabin? A
                     new cabin will be created using the same details
                     as the original
                 </Text>
-            </div>
             <Button_Delete
                 disabled={isDupliating}
                 onClick={handleClick}

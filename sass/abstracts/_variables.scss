@@ -16,61 +16,105 @@
     --color-red-200: #dd2d4a;
     --color-red-300: #880d1e;
 
-    --color-cream-50: #f3f2ed;
-    --color-cream-100: #f3f2ed;
-    --color-cream-150: #e9e6d4;
-    --color-cream-200: #fff4da;
-    --color-cream-250: #e9dfc7;
-    --color-cream-300: #d2c9b4;
-    --color-cream-400: #baa880;
-    --color-cream-500: #93784e;
-
-    --color-light-100: #f8f9fa;
-    --color-light-200: #e9ecef;
-    --color-light-300: #ced4da;
-
-    --color-dark-50: #cfd8e0;
-    --color-dark-100: #adb5bd;
-    --color-dark-200: #79838b;
-    --color-dark-300: #495057;
-
-    --color-primary-0: #f2f3f7;
-    --color-primary-50: #496dab;
-    --color-primary-100: #33538a;
-    --color-primary-150: #264272;
-    --color-primary-200: #0e3c8c;
-    --color-primary-300: #1f2c42;
-
-    --color-font-light: #f2f2f2;
-    --color-font-dark: #757575;
-
-    --color-main-border: #ead6f2;
-    --color-main-light: #694d75;
-    --color-main: #331832;
-    --color-main-dark: #1e131e;
-
-    --color-gold-light: #fbcf83;
-    --color-gold: #faba23;
-    --color-gold-dark: #ab771d;
 
 
-    /* Blue */
-    --color-blue-100: #dbeafe;
-    --color-blue-300: #93c5fd;
-    --color-blue-500: #3b82f6;
-    --color-blue-700: #1d4ed8;
+    &,
+    &.light-mode {
+        --color-primary-0: #f2f3f7;
+        --color-primary-50: #496dab;
+        --color-primary-100: #33538a;
+        --color-primary-150: #264272;
+        --color-primary-200: #0e3c8c;
+        --color-primary-300: #1f2c42;
 
-    /* Green */
-    --color-green-100: #dcfce7;
-    --color-green-300: #86efac;
-    --color-green-500: #22c55e;
-    --color-green-700: #15803d;
+        --color-main-border: #ead6f2;
+        --color-main-light: #694d75;
+        --color-main: #331832;
+        --color-main-dark: #1e131e;
 
-    /* red (Gray) */
-    --color-red-50: #f0bdca;
-    --color-red-100: #f26a8d;
-    --color-red-200: #dd2d4a;
-    --color-red-300: #de3a56;
-    --color-red-500: #de3a56;
-    --color-red-700: #580a14;
+        --color-gold-light: #fbcf83;
+        --color-gold: #faba23;
+        --color-gold-dark: #ab771d;
+
+        /* Blue */
+        --color-blue-100: #dbeafe;
+        --color-blue-300: #93c5fd;
+        --color-blue-500: #3b82f6;
+        --color-blue-700: #1d4ed8;
+
+        /* Green */
+        --color-green-100: #dcfce7;
+        --color-green-300: #86efac;
+        --color-green-500: #22c55e;
+        --color-green-700: #0e5528;
+
+        --color-red-50: #f0bdca;
+        --color-red-100: #f26a8d;
+        --color-red-200: #dd2d4a;
+        --color-red-300: #de3a56;
+        --color-red-500: #de3a56;
+        --color-red-700: #31090f;
+
+        --color-cream-50: #f3f2ed;
+        --color-cream-100: #f3f2ed;
+        --color-cream-150: #e9e6d4;
+        --color-cream-200: #fff4da;
+        --color-cream-250: #e9dfc7;
+        --color-cream-300: #d2c9b4;
+        --color-cream-400: #baa880;
+        --color-cream-500: #93784e;
+
+        --color-light-100: #f8f9fa;
+        --color-light-200: #e9ecef;
+        --color-light-300: #ced4da;
+
+        --color-dark-50: #cfd8e0;
+        --color-dark-100: #adb5bd;
+        --color-dark-200: #79838b;
+        --color-dark-300: #495057;
+
+
+
+        --color-font-light: #f2f2f2;
+        --color-font-dark: #3d3d3d;
+
+    }
+
+    // FOR DARK MODE
+
+    &.dark-mode {
+        --color-primary-0: #242529;
+
+        --color-light-100: #202023;
+        --color-light-200: #343737;
+        --color-light-300: #46484a;
+
+        --color-dark-50: #191a1b;
+        --color-dark-100: #4c5154;
+        --color-dark-200: #5d646a;
+        --color-dark-300: #b1b1b1;
+
+        --color-white: #000000;
+        --color-black: #ffffff;
+
+        --color-main-border: #39343b;
+        --color-main-light: #342739;
+        --color-main: #813d7f;
+        --color-main-dark: #cc80cc;
+
+        --color-red-100: #d34468;
+
+        --color-blue-100: #075985;
+        --color-blue-300: #075985;
+        --color-blue-700: #e0f2fe;
+        --color-green-300: #297645;
+        --color-green-700: #b5dec4;
+        --color-green-700: #dcfce7;
+        --color-yellow-100: #854d0e;
+        --color-yellow-700: #fef9c3;
+        --color-silver-100: #374151;
+        --color-silver-700: #f3f4f6;
+        --color-indigo-100: #3730a3;
+        --color-indigo-700: #e0e7ff;
+    }
 }

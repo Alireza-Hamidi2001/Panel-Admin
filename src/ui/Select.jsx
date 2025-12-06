@@ -7,12 +7,10 @@ const StyledSelect = styled.select`
     /* border: 1px solid */
     border: 1px solid var(--color-primary-300);
     background-color: var(--color-primary-100);
-    color: var(--color-light-100);
-    box-shadow: 0 0 0.5rem var(--color-main-dark);
+    color: var(--color-font-light);
     border-radius: 4px;
     font-weight: 500;
     font-family: 'open-sans';
-    box-shadow: 0 0 0.7rem var(--color-cream-400);
 
     &:focus {
         outline: none;

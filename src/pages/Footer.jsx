@@ -9,7 +9,6 @@ function Footer({ type }) {
                 position: absolute;
                 left: 2rem;
                 bottom: 2rem;
-                /* margin-top: 10rem; */
             `}
 
         ${respond('tab-port')`
@@ -45,6 +44,7 @@ function Footer({ type }) {
         font-family: 'Caveat';
         font-size: 2rem;
         font-weight: 600;
+        color: var(--color-dark-300);
     `;
 
     const Copyright = styled.p`

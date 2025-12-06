@@ -27,7 +27,7 @@ const Form = styled.form`
             justify-content: center;
             width: 50%;
             background: transparent;
-            background: var(--color-white);
+            background: var(--color-light-100);
         `}
 `;
 

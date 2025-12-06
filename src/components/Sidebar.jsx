@@ -5,7 +5,7 @@ import { respond } from '../utils/mixins';
 import Footer from '../pages/Footer';
 
 const Sidebar_Styled = styled.aside`
-    background-color: var(--color-white);
+    background-color: var(--color-light-100);
     padding: 2rem;
     font-size: 1.5rem;
     grid-row: 1/-1;
@@ -13,7 +13,6 @@ const Sidebar_Styled = styled.aside`
     flex-direction: column;
     /* justify-content: start; */
 
-    
     ${respond('tab-port')`
         padding:2rem 1rem;
     `}
@@ -29,7 +28,7 @@ function Sidebar() {
         <Sidebar_Styled>
             <Logo />
             <MainNav />
-            <Footer />
+            <Footer type="main" />
         </Sidebar_Styled>
     );
 }

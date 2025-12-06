@@ -27,7 +27,7 @@ const Img = styled.img`
 const Cabin = styled.div`
     font-size: 1.4rem;
     font-weight: 500;
-    color: var(--color-dark-100);
+    color: var(--color-dark-300);
     font-family: 'noto';
 
     ${respond('tab-port')`
@@ -36,6 +36,7 @@ const Cabin = styled.div`
 `;
 
 const Capacity = styled.div`
+    color: var(--color-dark-300);
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -54,6 +55,7 @@ const Capacity = styled.div`
 `;
 
 const Price = styled.div`
+    color: var(--color-dark-300);
     font-family: 'noto';
     font-size: 1.6rem;
     font-weight: 500;

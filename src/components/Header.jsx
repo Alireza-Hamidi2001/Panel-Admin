@@ -7,8 +7,8 @@ import HeaderMenu from '../ui/HeaderMenu';
 
 
 const Header_styled = styled.header`
-    background-color: var(--color-white);
-    border: 1px solid var(--color-cream-100);
+    background-color: var(--color-light-100);
+    border: 1px solid var(--color-light-200);
     color: var(--color-font-dark);
     font-size: 1.5rem;
     padding: 2rem;

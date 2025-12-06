@@ -10,13 +10,8 @@ const Tag = styled.p`
     border-radius: 100px;
     text-align: left;
 
-    /* border-right: 1px solid var(--color-main-border); */
-
-    /* Make these dynamic, based on the received prop */
     color: ${(props) => `var(--color-${props.type}-700)`};
-    background-color: ${(props) => `var(--color-${props.type}-100)`};
-    box-shadow: 0 0 0.3rem
-        ${(props) => `var(--color-${props.type}-700)`};
+    background-color: ${(props) => `var(--color-${props.type}-300)`};
 
     ${respond('tab-port')`
         font-size: 0.7rem;

@@ -4,7 +4,7 @@ import { respond } from '../../utils/mixins';
 const Cabin = styled.p`
     font-size: 1.6rem;
     font-weight: 600;
-    color: var(--color-dark-100);
+    color: var(--color-dark-200);
     font-family: 'KottaOne';
     text-align: left;
     border-right: 1px solid var(--color-main-border);
@@ -134,6 +134,8 @@ const Amount = styled.div`
     font-family: 'noto';
     font-size: 1.6rem;
     font-weight: 500;
+
+    color: var(--color-dark-300);
 
     ${respond('tab-port')`
         font-size: var(--font-tab);

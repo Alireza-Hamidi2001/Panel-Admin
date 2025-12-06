@@ -8,7 +8,7 @@ const StyledDiv = styled.div`
     padding: 4rem;
 
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
     justify-content: space-between;
     gap: 4rem;
@@ -25,14 +25,15 @@ const H1 = styled.h1`
     color: var(--color-red-200);
     letter-spacing: 0;
     font-style: italic;
+    grid-column: 1/-1;
 `;
 
 const Text = styled.p`
     font-size: 1.5rem;
     font-weight: 500;
-    color: var(--color-font-dark);
+    color: var(--color-dark-300);
     font-family: 'open-sans';
-    margin-top: 2rem;
+    grid-column: 1 / span 3;
 `;
 
 const Button_Delete = styled.button`
@@ -57,15 +58,13 @@ const Button_Delete = styled.button`
 export default function DeleteModal({ onDelete, isDeleting }) {
     return (
         <StyledDiv>
-            <div>
-                <H1>Delete Cabin</H1>
-                <Text>
-                    Do you really want to delete this room? This
-                    action is irreversible and all associated data
-                    will be permanently removed. Please confirm your
-                    decision before proceeding.
-                </Text>
-            </div>
+            <H1>Delete Cabin</H1>
+            <Text>
+                Do you really want to delete this room? This action is
+                irreversible and all associated data will be
+                permanently removed. Please confirm your decision
+                before proceeding.
+            </Text>
             <Button_Delete onClick={onDelete} disabled={isDeleting}>
                 {isDeleting ? (
                     <PulseLoader

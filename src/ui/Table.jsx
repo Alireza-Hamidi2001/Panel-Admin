@@ -11,7 +11,7 @@ const StyledTable = styled.div`
     overflow: hidden;
     width: 100%;
     margin-bottom: 3rem;
-    border: 1px solid var(--color-light-300);
+    /* border: 1px solid var(--color-light-300); */
 `;
 
 const CommonRow = styled.div`
@@ -37,7 +37,6 @@ const StyledHeader = styled(CommonRow)`
     text-align: left;
     font-weight: 600;
     font-size: 1.5rem;
-    border: 1px solid var(--color-light-200);
 
     ${respond('tab-port')`
         font-size: var(--font-tab);
@@ -47,7 +46,7 @@ const StyledHeader = styled(CommonRow)`
 
 const StyledRow = styled(CommonRow)`
     padding: 2rem 3rem;
-    background-color: #fff;
+    background-color: var(--color-light-100);
     text-align: left;
 
     ${respond('tab-port')`

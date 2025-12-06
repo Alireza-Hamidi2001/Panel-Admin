@@ -2,6 +2,17 @@
 
 .icons {
 
+    &_theme {
+        color: var(--color-dark-200) !important;
+        cursor: pointer;
+        font-size: 5rem;
+        transition: all 0.2s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
     &_create-cabin {
         font-size: 2rem;
         margin-right: 1rem;

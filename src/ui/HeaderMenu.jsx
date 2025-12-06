@@ -7,6 +7,7 @@ import { FaUser } from 'react-icons/fa';
 import { CiUser } from 'react-icons/ci';
 import Logout from '../features/authentication/Logout';
 import UserAvatar from '../features/authentication/UserAvatar';
+import DarkModeToggle from './DarkModeToggle';
 
 const StyledHeaderMenu = styled.ul`
     display: flex;
@@ -28,6 +29,9 @@ function HeaderMenu() {
             </List>
             <List>
                 <Logout />
+            </List>
+            <List>
+                <DarkModeToggle />
             </List>
             <List>
                 <UserAvatar />

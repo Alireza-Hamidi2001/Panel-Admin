@@ -10,13 +10,15 @@ import { respond } from '../utils/mixins';
 import Uploader from '../data/Uploader';
 
 function MainNav() {
+    const Nav = styled.nav`
+        margin-bottom: auto;
+    `;
     const NavList = styled.ul`
         display: flex;
         flex-direction: column;
         gap: 0.8rem;
         list-style: none;
         margin-top: 4rem;
-        margin-bottom: 19rem;
     `;
     const NavLink_text = styled.p`
         display: block;
@@ -32,7 +34,7 @@ function MainNav() {
             align-items: center;
             gap: 1.2rem;
 
-            color: var(--color-dark-100);
+            color: var(--color-dark-200);
             text-decoration: none;
             font-size: 1.6rem;
             font-weight: 500;
@@ -75,7 +77,7 @@ function MainNav() {
     `;
 
     return (
-        <nav>
+        <Nav>
             <NavList>
                 <li>
                     <NavLink_Styled to="/dashboard">
@@ -109,7 +111,7 @@ function MainNav() {
                 </li>
             </NavList>
             {/* <Uploader /> */}
-        </nav>
+        </Nav>
     );
 }
 
