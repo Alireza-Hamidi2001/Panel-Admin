@@ -31,10 +31,7 @@ const Cabin = styled.div`
     font-family: 'noto';
 
     ${respond('tab-port')`
-    font-size: var(--font-tab);
-    `}
-    ${respond('phone')`
-        font-size: var(--font-mobile);
+        font-size: var(--font-tab);
     `}
 `;
 
@@ -62,11 +59,8 @@ const Price = styled.div`
     font-weight: 500;
 
     ${respond('tab-port')`
-    font-size: var(--font-tab);
+        font-size: var(--font-tab);
     `}
-    ${respond('phone')`
-        font-size: var(--font-mobile);
-        `}
 `;
 
 const Discount = styled.div`
