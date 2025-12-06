@@ -89,17 +89,12 @@ const Discount = styled.div`
         ${respond('tab-port')`
             font-size: var(--font-tab);
             `}
-
-        ${respond('phone')`
-        font-size: var(--font-mobile);
-        `}
     }
 `;
 
 const Discount_P = styled.p`
     color: red;
 `;
-
 
 const ButtonsContainer = styled.div``;
 const Button = styled.button`
