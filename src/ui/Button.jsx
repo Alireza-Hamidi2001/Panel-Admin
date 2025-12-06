@@ -24,23 +24,20 @@ const sizes = {
 const variations = {
     primary: css`
         color: var(--color-white);
-        background-color: var(--color-primary-200);
+        background-color: var(--color-primary-100);
         font-family: 'open-sans';
-        font-family: sans-serif;
         position: relative;
         border-radius: 4px;
-        padding: 0.8rem;
+        padding: 1rem;
         width: max-content;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         top: 0;
         transition: all 0.2s;
 
         display: flex;
         justify-content: center;
         align-items: center;
-
-        min-width: 15rem;
-        min-height: 1.8rem;
+        gap: 0.5rem;
 
         ${respond('tab-port')`
             padding: 0.7rem 1.4rem;

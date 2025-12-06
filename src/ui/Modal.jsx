@@ -19,7 +19,7 @@ const ModalContainer = styled.div`
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    backdrop-filter: blur(1rem) brightness(0.2); ;
+    backdrop-filter: blur(1rem) brightness(0.3); ;
     box-shadow: 0 0 1rem red;
 `;
 
@@ -27,29 +27,15 @@ const StyledModal = styled.div`
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    background: transparent;
-    /* background: var(--color-cream-100); */
-    /* box-shadow: 0 0 3rem var(--color-cream-500); */
     padding: 6rem;
+
     transition: all 0.5s;
     animation: modalShow 0.5s ease-in-out;
-    width: 75%;
+    width: 65%;
 
     ${respond('tab-port')`
-        width: 90%;
+        width: 70%;
     `}
-`;
-
-const Overlay = styled.div`
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: var(--backdrop-color);
-    backdrop-filter: blur(4px);
-    z-index: 1000;
-    transition: all 0.5s;
 `;
 
 const Button = styled.button`
@@ -69,9 +55,6 @@ const Button = styled.button`
     & svg {
         width: 2.4rem;
         height: 2.4rem;
-        /* Sometimes we need both */
-        /* fill: var(--color-grey-500);
-        stroke: var(--color-grey-500); */
         color: var(--color-grey-500);
     }
 `;

@@ -1,33 +1,49 @@
 // components/Modal.js
 import { FadeLoader, PulseLoader } from 'react-spinners';
 import styled from 'styled-components';
+import { respond } from '../utils/mixins';
 
 const StyledDiv = styled.div`
-    border: 1px solid var(--color-cream-300);
-    padding: 2rem 4rem;
-    display: flex;
+    background: var(--color-white);
+    padding: 4rem;
+
+    display: grid;
+    grid-template-columns: 1fr auto;
     align-items: center;
-    gap: 2rem;
+    justify-content: space-between;
+    gap: 4rem;
+
+    width: 60%;
+    margin: 0 auto;
+
+    ${respond('phone')`
+        grid-template-columns: 1fr;
+            `}
+`;
+
+const H1 = styled.h1`
+    color: var(--color-red-200);
+    letter-spacing: 0;
+    font-style: italic;
 `;
 
 const Text = styled.p`
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 500;
     color: var(--color-font-dark);
-    letter-spacing: 1px;
-    font-family: 'StoryScript';
+    font-family: 'open-sans';
+    margin-top: 2rem;
 `;
 
 const Button_Delete = styled.button`
-    padding: 0.5rem 2rem;
-    font-size: 1.6rem;
+    padding: 1rem 1.2rem;
+    font-size: 1.3rem;
     background: var(--color-red-200);
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 4px;
     transition: all 0.2s;
-    width: 7rem;
 
     &:hover {
         transform: scale(1.05);
@@ -37,7 +53,16 @@ const Button_Delete = styled.button`
 export default function DeleteModal({ onDelete, isDeleting }) {
     return (
         <StyledDiv>
-            <Text>This cabin will be permanently deleted.</Text>
+            <div>
+                <H1>Delete Cabin</H1>
+                {/* <Text>This cabin will be permanently deleted.</Text> */}
+                <Text>
+                    Do you really want to delete this room? This
+                    action is irreversible and all associated data
+                    will be permanently removed. Please confirm your
+                    decision before proceeding.
+                </Text>
+            </div>
             <Button_Delete onClick={onDelete} disabled={isDeleting}>
                 {isDeleting ? (
                     <PulseLoader
@@ -46,7 +71,7 @@ export default function DeleteModal({ onDelete, isDeleting }) {
                         color="white"
                     />
                 ) : (
-                    'Confirm'
+                    'Delete'
                 )}
             </Button_Delete>
         </StyledDiv>
