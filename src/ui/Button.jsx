@@ -40,6 +40,7 @@ const variations = {
         gap: 0.5rem;
 
         ${respond('tab-port')`
+            padding: 0.5rem;
             border-radius: 2px;
         `}
 
