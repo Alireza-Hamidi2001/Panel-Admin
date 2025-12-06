@@ -40,13 +40,7 @@ const variations = {
         gap: 0.5rem;
 
         ${respond('tab-port')`
-            padding: 0.7rem 1.4rem;
-            font-size: 1.2rem;
-        `}
-        ${respond('phone')`
-            padding: 0.5rem 2rem;
-            min-width: auto;
-            font-size: 1.2rem;
+            font-size: 1rem;
         `}
 
         &:hover {
