@@ -22,7 +22,7 @@ const StyledPagination = styled.div`
 const P = styled.p`
     font-size: 1.6rem;
     margin-left: 0.8rem;
-    
+
     display: flex;
     align-items: center;
     gap: 0.6rem;
@@ -64,10 +64,6 @@ const PaginationButton = styled.button`
     border-radius: 4px;
 
     cursor: pointer;
-
-    ${respond('phone')`
-        font-size: 1rem;
-`}
 
     &:has(span:last-child) {
         padding-left: 0.4rem;
