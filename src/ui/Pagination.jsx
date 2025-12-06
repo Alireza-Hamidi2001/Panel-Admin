@@ -40,36 +40,33 @@ const P = styled.p`
 
 const Buttons = styled.div`
     display: flex;
-    gap: 0.6rem;
+    gap: 0.5rem;
 `;
 
 const PaginationButton = styled.button`
     background-color: ${(props) =>
         props.active
-            ? ' var(--color-primary-100)'
-            : 'var(--color-primary-200)'};
+            ? ' var(--color-primary-50)'
+            : 'var(--color-primary-100)'};
     color: ${(props) =>
         props.active ? ' var(--color-white)' : 'var(--color-white)'};
     border: none;
     font-weight: 500;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.4rem;
-    padding: 0.6rem 1.2rem;
+    gap: 0rem;
+    padding: 1rem;
     transition: all 0.3s;
-
-    letter-spacing: 1px;
-    font-family: 'StoryScript';
 
     border-radius: 4px;
 
     cursor: pointer;
 
     ${respond('phone')`
-        font-size: 1.2rem;
+        font-size: 1rem;
 `}
 
     &:has(span:last-child) {
